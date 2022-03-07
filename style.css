@@ -1,0 +1,64 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 411px) and (min-width: 215px){
+
+  .statusBar__{
+    display: flex;
+    align-content: center;
+    width:411px;
+    height:24px;
+    background-color: black;
+    z-index: 0;
+  }
+  .satutsBarr__Elementos{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index: 0;
+  }
+  .satutsBarr__Elementos__img1{
+    width:30px;
+    height: 30px;
+    margin: 2px 0 0 2.64px;
+    background-image: url(https://img.icons8.com/officel/2x/low-battery.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .header{
+    width: 411px;
+    height: 60px; 
+  }
+  .header__Elementos{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #E0E0E0;
+
+  }
+  .header__logo{
+    width:30px;
+    height: 27.63px;
+    border-radius: 22px 15px;
+    background-image: url(https://img.icons8.com/plasticine/2x/rick-sanchez.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+  }
+  .header__nav__link__img{
+    width: 24px;
+    height:24px;
+    background-image: url(https://img.icons8.com/ios-filled/2x/menu.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+  }
+
+}
+
