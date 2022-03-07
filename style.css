@@ -2,22 +2,29 @@ body{
   margin: 0;
   box-sizing: border-box;
 }
-@media (max-width: 411px) and (min-width: 215px){
-
+@media (max-width: 411px) and (min-width: 295px){
   .statusBar__{
     display: flex;
     align-content: center;
-    width:411px;
+    width:100%;
     height:24px;
     background-color: black;
     z-index: 0;
   }
   .satutsBarr__Elementos{
-    width:100%;
+    width:95%;
+    margin: 0 auto;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    z-index: 0;
+    color:white;
+    font-size:12px;
+    flex-wrap: nowrap;
+  }
+  .satutsBarr__Elementos_esquerda{
+    width:20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .satutsBarr__Elementos__img1{
     width:30px;
@@ -29,7 +36,52 @@ body{
     background-size: cover;
     z-index: 1;
   }
+  .satutsBarr__Elementos__img2{
+    width:20px;
+    height: 20px;
+    padding:1px;
+    background-image: url("https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/000000/external-wifi-gas-station-xnimrodx-lineal-gradient-xnimrodx.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    z-index: 1;
+  }
 
+  .statusBarr_Elementos_centro{
+    width:60%;
+    display:flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+  }
+  .statusBarr_Elementos_direita{
+    width:20%;
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-wrap: nowrap;
+  }
+  .satutsBarr__Elementos__direita__img3{
+    width:20px;
+    height: 20px;
+    margin: 2px 0 0 2.64px;
+    background-image: url("https://img.icons8.com/color-glass/48/000000/bluetooth.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    z-index: 1;
+  }
+  .satutsBarr__Elementos__direita__img5{
+    width:20px;
+    height: 20px;
+    margin: 2px 0 0 2.64px;
+    background-image: url("https://img.icons8.com/ultraviolet/40/000000/no-connection--v1.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    z-index: 1;
+
+  }
   .header{
     width: 411px;
     height: 60px; 
@@ -59,6 +111,6 @@ body{
     background-position-x: center;
     background-size: cover;
   }
-
 }
+
 
