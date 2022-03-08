@@ -1,6 +1,7 @@
 body{
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 @media (max-width: 411px) and (min-width: 295px){
   .statusBar__{
@@ -46,7 +47,6 @@ body{
     background-size: cover;
     z-index: 1;
   }
-
   .statusBarr_Elementos_centro{
     width:60%;
     display:flex;
@@ -82,6 +82,7 @@ body{
     z-index: 1;
 
   }
+  /* header */
   .header{
     width: 411px;
     height: 60px; 
@@ -96,9 +97,8 @@ body{
   }
   .header__logo{
     width:30px;
-    height: 27.63px;
-    border-radius: 22px 15px;
-    background-image: url(https://img.icons8.com/plasticine/2x/rick-sanchez.png);
+    height: 28.63px;
+    background-image: url(https://cantesani.github.io/projeto-individual/assets/img/logo.png);
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: cover;
@@ -112,5 +112,42 @@ body{
     background-size: cover;
   }
 }
+/* main */
+.main__{
+  width: 90%;
+  margin: 20px auto;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content: center;
+  line-height:1.8rem;
+}
+.main__lbl__{
+  display: block;
+  width: 371px;
+  height:22.22px;
+  font-size:14px;
+  line-height:22px;
+  color:  #333333;
+  margin-bottom:4px
 
-
+}
+.main__inpt__{
+  margin-bottom: 20px;
+  width: 92%;
+  height:28px;
+  border-color: solid 1px #979797;
+  padding-left: 20px;
+  border-radius:4px;
+  font-size:15px;
+  color: #363636;
+}
+.main__btn{
+  width:100%;
+  height: 35px;
+  font-size:14px;
+  line-height:2px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #2b2a2a;
+}

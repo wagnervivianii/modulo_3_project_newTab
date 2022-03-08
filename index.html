@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -11,7 +12,7 @@
   <title>Controle financeiro</title>
 </head>
 <body>
-
+<!-- barra de status -->
   <section class="statusBar__">
     <div class="satutsBarr__Elementos">
       <div class="satutsBarr__Elementos_esquerda">
@@ -33,7 +34,7 @@
       
     </div>
   </section>
-
+<!-- header -->
   <section class="header__">
     <header class="header__Elementos">
       <div class="header__logo">
@@ -50,6 +51,21 @@
       </div>
     </header>
   </section>
+<!-- main-->
+<section class="main__">
+  <div class="main__cont__form">
+    <form action="" class="main__form">
+      <label class="main__lbl__ main__lbl__tipo" for="tipo">Tipo de transação</label>
+      <input class="main__inpt__ main__inpt__tipo" type="text" id="tipo" placeholder="Compra">
+      <label class="main__lbl__ main__lbl__nome" for="nome">Nome da Mercadoria</label>
+      <input class="main__inpt__ main__inpt__nome" type="text" id="nome" placeholder="Input" >
+      <label class="main__lbl__ main__lbl__nome" for="valor">Valor</label>
+      <input class="main__inpt__ main__inpt__nome" type="text" id="valor" placeholder="R$0,00">
+      <div class="main__cont__form__btn"><button class="main__btn">Adicionar transação</button></div>
+    </form>
+  </div>
+</section>
+
 
 </body>
 </html>
