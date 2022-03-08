@@ -1,71 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Controle financeiro</title>
-</head>
-<body>
-<!-- barra de status -->
-  <section class="statusBar__">
-    <div class="satutsBarr__Elementos">
-      <div class="satutsBarr__Elementos_esquerda">
-        <div class="satutsBarr__Elementos__img1"></div>
-        <div class="satutsBarr__Elementos__img2"></div>
-      </div>
-      <div class="statusBarr_Elementos_centro">
-        <div class="satutsBarr__Elementos__centro__hora">
-          <p>9:42AM</p>
-          </div>
-      </div>
-      <div class="statusBarr_Elementos_direita">
-        <div class="satutsBarr__Elementos__direita__img3"></div>
-        <div class="satutsBarr__Elementos__direita__text">
-          <p>42%</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Controle financeiro</title>
+  </head>
+  <body>
+  <!-- barra de status -->
+    <section class="statusBar__">
+      <div class="satutsBarr__Elementos">
+        <div class="satutsBarr__Elementos__esquerda">
+          <div class="satutsBarr__Elementos__esquerda__img1"></div>
+          <div class="satutsBarr__Elementos__esquerda__img2"></div>
         </div>
-        <div class="satutsBarr__Elementos__direita__img5"></div>
-      </div>
-      
-    </div>
-  </section>
-<!-- header -->
-  <section class="header__">
-    <header class="header__Elementos">
-      <div class="header__logo">
-        <div  class="header__logo__img"></div>
-      </div>
-      <div class="header__titulo" >
-        <h1 class="header__titulo__texto">Controle Financeiro</h1>
-      </div>
-      <div class="header__nav" >
-        <a  class="header__nav__link" href="">
-          <div class="header__nav__link__img">
+        <div class="statusBarr_Elementos_centro">
+          <div class="satutsBarr__Elementos__centro__hora">
+            <p>9:42AM</p>
+            </div>
+        </div>
+        <div class="statusBarr_Elementos_direita">
+          <div class="satutsBarr__Elementos__direita__img3"></div>
+          <div class="satutsBarr__Elementos__direita__text">
+            <p>42%</p>
           </div>
-        </a>
+          <div class="satutsBarr__Elementos__direita__img5"></div>
+        </div>
+        
       </div>
-    </header>
-  </section>
-<!-- main-->
-<section class="main__">
-  <div class="main__cont__form">
-    <form action="" class="main__form">
-      <label class="main__lbl__ main__lbl__tipo" for="tipo">Tipo de transação</label>
-      <input class="main__inpt__ main__inpt__tipo" type="text" id="tipo" placeholder="Compra">
-      <label class="main__lbl__ main__lbl__nome" for="nome">Nome da Mercadoria</label>
-      <input class="main__inpt__ main__inpt__nome" type="text" id="nome" placeholder="Input" >
-      <label class="main__lbl__ main__lbl__nome" for="valor">Valor</label>
-      <input class="main__inpt__ main__inpt__nome" type="text" id="valor" placeholder="R$0,00">
-      <div class="main__cont__form__btn"><button class="main__btn">Adicionar transação</button></div>
-    </form>
-  </div>
-</section>
-
-
-</body>
+    </section>
+  <!-- header -->
+    <section class="header__">
+      <header class="header__Elementos">
+        <div class="header__logo">
+          <div  class="header__logo__img"></div>
+        </div>
+        <div class="header__titulo" >
+          <h1 class="header__titulo__texto">Controle Financeiro</h1>
+        </div>
+        <div class="header__nav" >
+          <a  class="header__nav__link" href="">
+            <div class="header__nav__link__img">
+            </div>
+          </a>
+        </div>
+      </header>
+    </section>
+  <!-- main-->
+    <section class="main__">
+    <div class="main__cont__form">
+      <form action="" class="main__form">
+        <label class="main__lbl__ main__lbl__tipo" for="tipo">Tipo de transação</label>
+        <input class="main__inpt__ main__inpt__tipo" type="text" id="tipo" placeholder="Compra">
+        <label class="main__lbl__ main__lbl__nome" for="nome">Nome da Mercadoria</label>
+        <input class="main__inpt__ main__inpt__nome" type="text" id="nome" placeholder="Input" >
+        <label class="main__lbl__ main__lbl__nome" for="valor">Valor</label>
+        <input class="main__inpt__ main__inpt__nome" type="text" id="valor" placeholder="R$0,00">
+        <div class="main__cont__form__btn"><button class="main__btn">Adicionar transação</button></div>
+      </form>
+    </div>
+    </section>
+    <!-- linha-->
+    <div class="line__"></div>
+    <!-- Account Statement -->
+    <section class="extrato__">
+      <div class="Extrato__title">
+        <h2 class="Extrato__title__text">Extrato de Transações</h2>
+      </div>
+      <div class="extrato__mercadoria">
+        <p class="extrato__mercadoria_text_mercadoria">Mercadoria</p>
+        <p class="extrato__mercadoria_text_Valor">Valor</p>
+      </div>
+    </section>
+  </body>
 </html>
