@@ -1,7 +1,15 @@
-body, header, div, p, h1, h2, h3, h4, h5, section, input, button, label, a {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+body a {
+  text-decoration: none;
+  transition: 0.4s;
 }
 
 .header {
@@ -11,8 +19,12 @@ body, header, div, p, h1, h2, h3, h4, h5, section, input, button, label, a {
   background-color: #E0E0E0;
 }
 .header .header__div {
+  max-width: 411px;
+  padding: 1rem 0;
+  margin: 0 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .main__div input {
