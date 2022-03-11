@@ -6,85 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles.css">
     <title>Controle financeiro</title>
   </head>
   <body>
-     
   <!-- header -->
     <section class="header">
       <header class="header__div">
-        <div class="header__div__img">
-          <div  class="header__div__img--left"></div>
+        <div class="header__img">
+          <div  class="header__img--left"></div>
         </div>
-        <div class="header__div--title">
-          <h1 class="header__div__h1">Controle Financeiro</h1>
+        <div class="header__title">
+          <h1 class="header__h1">Controle Financeiro</h1>
         </div>
         <div class="header__div--menu" >
-            <input type="checkbox" class="header__div--menu__input">
-            <div class="header__nav__link__img">
+            <input type="checkbox" class="header__input">
+            <div class="header__nav__img">
             </div>
           </a>
         </div>
       </header>
     </section>
   <!-- main-->
-    <section class="main__">
-    <div class="main__cont__form">
-      <form action="" class="main__form">
-        <label class="main__lbl__ main__lbl__tipo" for="tipo">Tipo de transação</label>
-        <input class="main__inpt__ main__inpt__tipo" type="text" id="tipo" placeholder="Compra">
-        <label class="main__lbl__ main__lbl__nome" for="nome">Nome da Mercadoria</label>
-        <input class="main__inpt__ main__inpt__nome" type="text" id="nome" placeholder="Input" >
-        <label class="main__lbl__ main__lbl__nome" for="valor">Valor</label>
-        <input class="main__inpt__ main__inpt__nome" type="text" id="valor" placeholder="R$0,00">
-        <div class="main__cont__form__btn"><button class="main__btn">Adicionar transação</button></div>
-      </form>
-    </div>
+    <section class="main">
+      <div class="main__div">
+        <form action="" class="main__form">
+          <label class="main__lbl__ main__lbl--tipo" for="tipo">Tipo de transação</label>
+          <input class="main__inpt__ main__inpt--tipo" type="text" id="tipo" placeholder="Compra">
+          <label class="main__lbl__ main__lbl--name" for="nome">Nome da Mercadoria</label>
+          <input class="main__inpt__ main__inpt--name" type="text" id="nome" placeholder="Input" >
+          <label class="main__lbl__ main__lbl--name" for="valor">Valor</label>
+          <input class="main__inpt__ main__inpt__name" type="text" id="valor" placeholder="R$0,00">
+          <div class="main__div__buttom">
+            <button class="main__btn">Adicionar transação</button>
+          </div>
+        </form>
+      </div>
     </section>
-    <!-- linha-->
-    <div class="line__"></div>
+    <!-- lines-->
+    <div class="line"></div>
     <!-- Account Statement -->
-    <section class="extrato__">
-      <div class="extrato__title">
-        <h2 class="Extrato__title__text">Extrato de Transações</h2>
+    <section class="extract__">
+      <div class="extract__div">
+        <h2 class="extract__h2">Extrato de Transações</h2>
       </div>
-      <div class="extrato__mercadoria">
-        <p class="extrato__mercadoria_text_mercadoria">Mercadoria</p>
-        <p class="extrato__mercadoria_text_Valor">Valor</p>
+      <div class="extract__div--text">
+        <p class="extract__p--merc">Mercadoria</p>
+        <p class="extract__p--value">Valor</p>
       </div>
-      <div class="extrato__linha">
-         <a class="extrato__linha__nav extrato__linha__nav__1" href="/index.html" >
-          <p class="extrato__linha__nav__simbol">+</p>
+      <div class="extract__div--line">
+         <a class="extract__a extract--nav" href="/index.html" >
+          <p class="extract__p--+">+</p>
          </a>
-        <p class="extrato__linha__1 extrato__linha__align">Lorem ipsum dolor sit amet consectetur.</p>
-        <p class="extrato__linha__2 extrato__linha__2align ">R$12.999,99</p>
+        <p class="extract__p--text extract--align">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="extract__p--text extract--align ">R$12.999,99</p>
       </div>
-      <div class="extrato__linha">
+      <div class="extract__div--line">
         <a class="extrato__linha__nav extrato__linha__nav__2" href="/index.html" >
          <p class="extrato__linha__nav__simbol">-</p>
         </a>
        <p class="extrato__linha__2__1 extrato__linha__align ">Lorem, ipsum dolor.</p>
        <p class="extrato__linha__2__2 extrato__linha__2align">R$99,99</p>
      </div>
-     <div class="extrato__linha">
-      <a class="extrato__linha__nav extrato__linha__nav__3" href="/index.html" >
-       <p class="extrato__linha__nav__simbol">+</p>
+     <div class="extract__div--line">
+      <a class="extract__a extract--nav" href="/index.html" >
+       <p class="extract__a extract--nav">+</p>
       </a>
-     <p class="extrato__linha__3__1 extrato__linha__align">Lorem, ipsum.</p>
-     <p class="extrato__linha__3__2 extrato__linha__2align">R$9,99</p>
+     <p class="extract__p--text extract--align">Lorem, ipsum.</p>
+     <p class="extract__p--total extract--align">R$9,99</p>
    </div>
-   <div class="extrato__linha extrato__linha__total">
-     <p class="extrato__linha__total__1 extrato__linha__align">Total</p>
-     <p class="extrato__linha__total__2 extrato__linha__2align">R$12.909.99</p>
+   <div class="extract__div--total">
+     <p class="extract__p--text extract--align">Total</p>
+     <p class="extract__p--total extract--align">R$12.909.99</p>
    </div>
-   <div class="extrato__linha__lucro" >
-    <p class="extrato__linha__lucro__text" >[Lucro]</p>
+   <div class="extract__div--profit" >
+    <p class="extract__p--profit" >[Lucro]</p>
    </div>
     </section>
     <!-- footer -->
-    <footer class="rodape"></footer>
+    <footer class="end__footer"></footer>
   </body>
 </html>
