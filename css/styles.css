@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containner__header {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.containner__header header {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.containner__header header img {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
+.containner__header header div {
+  margin: 10px 20px;
+}
+.containner__header header input {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

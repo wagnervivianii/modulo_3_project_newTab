@@ -7,22 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./styles.css">
-    <title>Controle financeiro</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Controle Financeiro</title>
   </head>
   <body>
   <!-- header -->
-    <section class="header">
-      <header class="header__div">
-        <div class="header__img">
-          <div  class="header__img--left">
-            <img src="/img/logo.png" alt="">
-          </div>
+    <section class="containner__header">
+      <header class="header__global">
+        <div  class="img--left">
+          <img src="/img/logo.png" alt="">
         </div>
-        <div class="header__title">
+        <div class="title">
           <h1 class="header__h1">Controle Financeiro</h1>
         </div>
-        <div class="header__div--menu" >
+        <div class="menu" >
             <input type="checkbox" class="header__input" id="hamburguer">
             <label for="hamburguer" >
               <img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png"/>
@@ -34,12 +32,12 @@
     <section class="main">
       <div class="main__div">
         <form action="" class="main__form">
-          <label class="main__lbl__ main__lbl--tipo" for="tipo">Tipo de transação</label>
-          <input class="main__inpt__ main__inpt--tipo" type="text" id="tipo" placeholder="Compra">
-          <label class="main__lbl__ main__lbl--name" for="nome">Nome da Mercadoria</label>
-          <input class="main__inpt__ main__inpt--name" type="text" id="nome" placeholder="Input" >
-          <label class="main__lbl__ main__lbl--name" for="valor">Valor</label>
-          <input class="main__inpt__ main__inpt__name" type="text" id="valor" placeholder="R$0,00">
+          <label class="main__lbl main__lbl--tipo" for="tipo">Tipo de transação</label>
+          <input class="main__inpt main__inpt--tipo" type="text" id="tipo" placeholder="Compra">
+          <label class="main__lbl main__lbl--name" for="nome">Nome da Mercadoria</label>
+          <input class="main__inpt main__inpt--name" type="text" id="nome" placeholder="Input" >
+          <label class="main__lbl main__lbl--name" for="valor">Valor</label>
+          <input class="main__inpt main__inpt__name" type="text" id="valor" placeholder="R$0,00">
           <div class="main__div__buttom">
             <button class="main__btn">Adicionar transação</button>
           </div>
