@@ -2,31 +2,93 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-.containner__header {
-  margin: 0 auto;
-  max-width: 1200px;
+.container__header {
+  width: 100%;
+  background-color: #E0E0E0;
+  position: absolute;
 }
-.containner__header header {
-  margin: 0 auto;
-  max-width: 1200px;
-  height: auto;
+.container__header header {
+  width: 90%;
+  max-width: 1500px;
+  min-width: 331px;
   display: flex;
   justify-content: space-between;
+  align-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  padding: 20px 0;
+  margin: 0 auto;
 }
-.containner__header header img {
+.container__header #cont__img {
+  margin-left: 10px;
+}
+.container__header #menu--hamburguer {
+  display: flex;
+  justify-content: space-between;
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.container__header #menu--hamburguer > input {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.container__header #menu--hamburguer > label {
   width: 30px;
   height: 30px;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
-.containner__header header div {
-  margin: 10px 20px;
+.container__header #menu--hamburguer > label > span {
+  width: 30px;
+  background-color: black;
+  margin: 2px 0;
+  padding: 2px;
 }
-.containner__header header input {
+.container__header #menu--hamburguer > label > span > span:first-child {
+  top: 0;
+}
+.container__header #menu--hamburguer > label > span > span:nth-last-child(2) {
+  top: 8px;
+}
+.container__header #menu--hamburguer > label > span > span:nth-last-child(3) {
+  top: 16px;
+}
+.container__header #menu--hamburguer > nav {
   display: none;
+}
+.container__header #menu--hamburguer > input:checked {
+  width: 30px;
+  height: 30px;
+}
+.container__header #menu--hamburguer > input:checked ~ label::after {
+  content: " ";
+  top: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  overflow: hidden;
+  transform: scaleX(2.45);
+}
+.container__header #menu--hamburguer > input:checked ~ nav {
+  position: fixed;
+  display: block;
+}
+.container__header #menu--hamburguer > input:checked ~ nav > ul {
+  display: flex;
+  flex-direction: column;
+}
+.container__header #menu--hamburguer > input:checked ~ nav > ul > a {
+  padding: 6px 0;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

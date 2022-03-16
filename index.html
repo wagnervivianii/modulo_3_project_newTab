@@ -1,90 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Controle Financeiro</title>
-  </head>
-  <body>
-  <!-- header -->
-    <section class="containner__header">
-      <header class="header__global">
-        <div  class="img--left">
-          <img src="/img/logo.png" alt="">
-        </div>
-        <div class="title">
-          <h1 class="header__h1">Controle Financeiro</h1>
-        </div>
-        <div class="menu" >
-            <input type="checkbox" class="header__input" id="hamburguer">
-            <label for="hamburguer" >
-              <img src="https://img.icons8.com/ios-filled/50/000000/menu--v1.png"/>
-            </label>
-        </div>
-      </header>
-    </section>
-  <!-- main-->
-    <section class="main">
-      <div class="main__div">
-        <form action="" class="main__form">
-          <label class="main__lbl main__lbl--tipo" for="tipo">Tipo de transação</label>
-          <input class="main__inpt main__inpt--tipo" type="text" id="tipo" placeholder="Compra">
-          <label class="main__lbl main__lbl--name" for="nome">Nome da Mercadoria</label>
-          <input class="main__inpt main__inpt--name" type="text" id="nome" placeholder="Input" >
-          <label class="main__lbl main__lbl--name" for="valor">Valor</label>
-          <input class="main__inpt main__inpt__name" type="text" id="valor" placeholder="R$0,00">
-          <div class="main__div__buttom">
-            <button class="main__btn">Adicionar transação</button>
-          </div>
-        </form>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Controle Financeiro</title>
+</head>
+<body>
+  <section class="container__header">
+    <header id="header">
+      <div id="cont__img">
+        <img src="/img/logo.png" alt="logo">
       </div>
-    </section>
-    <!-- lines-->
-    <div class="line"></div>
-    <!-- Account Statement -->
-    <section class="extract__">
-      <div class="extract__div">
-        <h2 class="extract__h2">Extrato de Transações</h2>
+      <div id="cont--title">
+        <h2>Controle Financeiro</h2>
       </div>
-      <div class="extract__div--text">
-        <p class="extract__p--merc">Mercadoria</p>
-        <p class="extract__p--value">Valor</p>
+      <div id="menu--hamburguer">
+        <input type="checkbox" name="inpt--hamburguer" id="hamburguer" checked>
+        <label for="hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul>
+            <a href="#"><li>1</li></a>
+            <a href="#"><li>2</li></a>
+            <a href="#"><li>3</li></a>
+          </ul>
+        </nav>
       </div>
-      <div class="extract__div--line">
-         <a class="extract__a extract--nav" href="/index.html" >
-          <p class="extract__p--+">+</p>
-         </a>
-        <p class="extract__p--text extract--align">Lorem ipsum dolor sit amet consectetur.</p>
-        <p class="extract__p--text extract--align ">R$12.999,99</p>
-      </div>
-      <div class="extract__div--line">
-        <a class="extrato__linha__nav extrato__linha__nav__2" href="/index.html" >
-         <p class="extrato__linha__nav__simbol">-</p>
-        </a>
-       <p class="extrato__linha__2__1 extrato__linha__align ">Lorem, ipsum dolor.</p>
-       <p class="extrato__linha__2__2 extrato__linha__2align">R$99,99</p>
-     </div>
-     <div class="extract__div--line">
-      <a class="extract__a extract--nav" href="/index.html" >
-       <p class="extract__a extract--nav">+</p>
-      </a>
-     <p class="extract__p--text extract--align">Lorem, ipsum.</p>
-     <p class="extract__p--total extract--align">R$9,99</p>
-   </div>
-   <div class="extract__div--total">
-     <p class="extract__p--text extract--align">Total</p>
-     <p class="extract__p--total extract--align">R$12.909.99</p>
-   </div>
-   <div class="extract__div--profit" >
-    <p class="extract__p--profit" >[Lucro]</p>
-   </div>
-    </section>
-    <!-- footer -->
-    <footer class="end__footer"></footer>
-  </body>
+    </header>
+  </section>
+</body>
 </html>
