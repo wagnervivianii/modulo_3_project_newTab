@@ -7,76 +7,37 @@
   list-style: none
 .container__header
   width: 100%
+  position: fixed
   background-color: #E0E0E0
-  position: absolute
   header
+    margin: 0 auto
     width: 90%
     max-width: 1500px
-    min-width: 331px
+    min-width: 335px
     display: flex
     justify-content: space-between
     align-content: center
     align-items: center
     flex-wrap: nowrap
     padding: 20px 0
-    margin: 0 auto
-  #cont__img
-    margin-left: 10px
-  #cont--title
-  #menu--hamburguer
-    display: flex
-    justify-content: space-between
-    width: 20px
-    height: auto
-    cursor: pointer
-    margin-right: 15px
-    > input
-      width: 1px
-      height: 1px
-      opacity: 0
-    > label
+  > #menu--hamburguer
+      display: flex
+      align-content: center
       width: 30px
       height: 30px
-      display: flex
-      flex-direction: column
-      > span
-        width: 30px
-        background-color: black
-        margin: 2px 0
-        padding: 2px
-        > span:first-child
-          top: 0
-        > span:nth-last-child(2)
-          top: 8px
-        > span:nth-last-child(3)
-          top: 16px
-    > nav
-        display: none
-    > input:checked
+      cursor: pointer
+    >label
+      > i
         width: 30px
         height: 30px
-        ~ label::after
-          content: " "
-          top: 0
-          position: absolute
-          width: 100vw
-          height: 100vh
-          background-color: red
-          overflow: hidden
-          transform: scaleX(2.45)
-        ~ nav
-          position: fixed
-          display: block
-          > ul
-            display: flex
-            flex-direction: column
-            > a
-              padding: 6px 0
-              color: white
+  > input
+    width: 1px
+    height: 1px
+    opacity: 0
     
 
-    
-    
+        
+
 
 
   
