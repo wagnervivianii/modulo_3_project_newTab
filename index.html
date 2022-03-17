@@ -12,6 +12,7 @@
   <title>Controle Financeiro</title>
 </head>
 <body>
+
   <section class="container__header">
     <header id="header">
       <div id="cont__img">
@@ -21,19 +22,26 @@
         <h2>Controle Financeiro</h2>
       </div>
       <div id="menu--hamburguer">
-        <input type="checkbox" name="inpt--hamburguer" id="hamburguer" checked>
-        <label  for="hamburguer">
-          <i class="fa-solid fa-bars"></i>
-        </label>
-        <nav>
-          <ul>
-            <a href="#"><li>1</li></a>
-            <a href="#"><li>2</li></a>
-            <a href="#"><li>3</li></a>
-          </ul>
-        </nav>
+        <a class="show-action icon-menu" href="#box-1">
+          <i class="fa-solid fa-bars fa-2x"></i>
+        </a>         
       </div>
     </header>
+  </section>
+
+  <section class="menu_mobile hide-action">
+    <div id="box-1">
+      <nav class="mostrar" >
+        <ul>
+          <a href="#"><li>Resumo</li></a>
+          <a href="#"><li>Dashboard</li></a>
+          <a href="#"><li>Configurações</li></a>
+        </ul>
+        <a class="hide-action move" href="#">
+          <i class="fa-solid fa-xmark fa-2x"></i>
+        </a>
+      </nav>
+    </div>
   </section>
 </body>
 </html>

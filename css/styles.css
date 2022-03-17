@@ -9,14 +9,15 @@
 
 .container__header {
   width: 100%;
-  position: fixed;
   background-color: #E0E0E0;
+  position: fixed;
+  z-index: -1;
 }
-.container__header header {
+.container__header > header {
   margin: 0 auto;
   width: 90%;
   max-width: 1500px;
-  min-width: 335px;
+  min-width: 340px;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -24,36 +25,65 @@
   flex-wrap: nowrap;
   padding: 20px 0;
 }
-.container__header header #menu--hamburguer {
+.container__header > header > #menu--hamburguer {
   display: flex;
+  align-content: center;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  just
 }
-.container__header header #menu--hamburguer > input {
-  width: 1px;
-  height: 1px;
-  opacity: 0;
+.container__header > header > #menu--hamburguer > a:visited {
+  color: #333333;
+  text-decoration: none;
 }
-.container__header header #menu--hamburguer > label {
+
+.menu_mobile {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
 }
-.container__header header #menu--hamburguer > label > span {
-  width: 30px;
-  background-color: black;
-  margin: 2px 0;
-  padding: 2px;
-}
-.container__header header #menu--hamburguer > nav {
+.menu_mobile > #box-1 .mostrar,
+.menu_mobile #box-1 .hide-action {
   display: none;
 }
-.container__header header #menu--hamburguer > input:checked ~ label::after {
-  content: "";
-  width: 100vw;
+.menu_mobile > #box-1:target .mostrar,
+.menu_mobile #box-1:target .hide-action {
+  display: block;
+}
+.menu_mobile > #box-1 > nav {
+  width: 85vw;
   height: 100vh;
-  background-color: red;
+  background-color: #333333;
+  float: right;
+}
+.menu_mobile > #box-1 > nav > ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 62px;
+}
+.menu_mobile > #box-1 > nav > ul > a {
+  color: #FFFFFF;
+}
+.menu_mobile > #box-1 > nav > ul > a > li {
+  margin-right: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  padding: 10px 0;
+}
+.menu_mobile > #box-1 > nav > ul > a:hover {
+  width: 100%;
+  background-color: #C4C4C4;
+  text-align: end;
+  margin-right: auto;
+  color: #333333;
+}
+.menu_mobile > #box-1 > nav > a {
+  position: fixed;
+  top: 15px;
+  margin-left: 15px;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=styles.css.map */
