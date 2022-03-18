@@ -5,6 +5,8 @@
   font-family: 'Lato', sans-serif
   text-decoration: none
   list-style: none
+  max-width: 1500px
+  
 .container__header
   width: 100%
   max-height: 100px
@@ -120,7 +122,9 @@ hr
   justify-content: space-around
   >div
     >h1
-      text-align: center   
+      text-align: center
+  .head
+    font-weight: 600   
   >div:nth-child(2),div:nth-child(3),div:nth-child(4),div:nth-child(5),div:nth-child(6)
     display: flex
     flex-wrap: nowrap
@@ -131,13 +135,12 @@ hr
     >p:last-child
       margin-left: auto
       margin-right: 20px
-      
     >p:first-child
       margin: 0 15px 0 15px
   >div:nth-last-child(2)
     border-bottom: double 3px #979797
-  .head
-    font-weight: 600
+  >div:nth-last-child(1)
+    border: none
 .container_footer
   >div
     width: 100%
@@ -185,7 +188,32 @@ hr
         width: 100%
         >button
           width: 30%
-          
+@media (min-width: 1112px)
+  .main
+    width: 93%
+    margin: 30px auto
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    >.container_form
+      width: 40%
+      height: 344px
+      margin: 0 auto
+      >div
+        >form
+          display: flex
+          flex-direction: column
+          >div
+            width: 100%
+        >div
+          >button
+            width: 100%
+    >.container_extract
+      width: 55%
+      height: 281px
+      border: solid 1px #979797
+
+    
         
 
 

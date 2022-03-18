@@ -5,6 +5,7 @@
   font-family: "Lato", sans-serif;
   text-decoration: none;
   list-style: none;
+  max-width: 1500px;
 }
 
 .container__header {
@@ -145,6 +146,9 @@ hr {
 .container_extract > div > h1 {
   text-align: center;
 }
+.container_extract .head {
+  font-weight: 600;
+}
 .container_extract > div:nth-child(2), .container_extract div:nth-child(3), .container_extract div:nth-child(4), .container_extract div:nth-child(5), .container_extract div:nth-child(6) {
   display: flex;
   flex-wrap: nowrap;
@@ -164,8 +168,8 @@ hr {
 .container_extract > div:nth-last-child(2) {
   border-bottom: double 3px #979797;
 }
-.container_extract .head {
-  font-weight: 600;
+.container_extract > div:nth-last-child(1) {
+  border: none;
 }
 
 .container_footer > div {
@@ -227,6 +231,35 @@ hr {
   }
   .container_form > div > .div_btn > button {
     width: 30%;
+  }
+}
+@media (min-width: 1112px) {
+  .main {
+    width: 93%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .main > .container_form {
+    width: 40%;
+    height: 344px;
+    margin: 0 auto;
+  }
+  .main > .container_form > div > form {
+    display: flex;
+    flex-direction: column;
+  }
+  .main > .container_form > div > form > div {
+    width: 100%;
+  }
+  .main > .container_form > div > div > button {
+    width: 100%;
+  }
+  .main > .container_extract {
+    width: 55%;
+    height: 281px;
+    border: solid 1px #979797;
   }
 }
 
