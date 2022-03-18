@@ -5,7 +5,6 @@
   font-family: "Lato", sans-serif;
   text-decoration: none;
   list-style: none;
-  max-height: 707px;
 }
 
 .container__header {
@@ -157,8 +156,11 @@
 .container_extract > div:nth-child(2) > p:first-child, .container_extract div:nth-child(3) > p:first-child, .container_extract div:nth-child(4) > p:first-child, .container_extract div:nth-child(5) > p:first-child, .container_extract div:nth-child(6) > p:first-child {
   margin: 0 15px 0 15px;
 }
-.container_extract > div:last-child {
+.container_extract > div:nth-last-child(2) {
   border-bottom: double 3px #979797;
+}
+.container_extract > div:last-child {
+  border: none;
 }
 .container_extract .head {
   font-weight: 600;
