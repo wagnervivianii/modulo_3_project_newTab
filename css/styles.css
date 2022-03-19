@@ -13,10 +13,8 @@
   background-color: #E0E0E0;
 }
 .container__header > header {
-  margin: 0 auto;
   width: 90%;
-  max-width: 1500px;
-  min-width: 340px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -30,7 +28,6 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  z-index: 1;
 }
 .container__header > header > #menu--hamburguer > a:visited {
   color: #333333;
@@ -110,6 +107,7 @@
   margin-top: 2px;
   border-radius: 4px;
   border: solid 1px #979797;
+  color: #333333;
 }
 .container_form > div > form > div > label {
   margin-top: 15px;
@@ -144,9 +142,11 @@ hr {
 }
 .container_extract > div > h1 {
   text-align: center;
+  color: #333333;
 }
 .container_extract .head {
   font-weight: 600;
+  color: #333333;
 }
 .container_extract > div:nth-child(2), .container_extract div:nth-child(3), .container_extract div:nth-child(4), .container_extract div:nth-child(5), .container_extract div:nth-child(6) {
   display: flex;
@@ -156,6 +156,7 @@ hr {
 }
 .container_extract > div:nth-child(2) > p, .container_extract div:nth-child(3) > p, .container_extract div:nth-child(4) > p, .container_extract div:nth-child(5) > p, .container_extract div:nth-child(6) > p {
   margin-bottom: 5px;
+  color: #333333;
 }
 .container_extract > div:nth-child(2) > p:last-child, .container_extract div:nth-child(3) > p:last-child, .container_extract div:nth-child(4) > p:last-child, .container_extract div:nth-child(5) > p:last-child, .container_extract div:nth-child(6) > p:last-child {
   margin-left: auto;
@@ -182,7 +183,7 @@ hr {
   border-bottom: solid 10px #333333;
 }
 
-@media (min-width: 411px) {
+@media (min-width: 100px) {
   #header > div:last-child {
     display: none;
   }
@@ -211,6 +212,9 @@ hr {
   }
   .container_form > div > form > div:first-child, .container_form > div > form > div:last-child {
     width: 25%;
+  }
+  .container_form > div > form > div:first-child > label, .container_form > div > form > div:last-child > label {
+    width: 100%;
   }
   .container_form > div > form > div:first-child > input, .container_form > div > form > div:last-child > input {
     width: 100%;
@@ -280,7 +284,7 @@ hr {
   }
   #header > div:last-child > nav > ul {
     display: flex;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
   }
   #header > div:last-child > nav > ul > a {
     font-size: 4px;
@@ -296,6 +300,9 @@ hr {
   #header > div:last-child > nav > ul a:last-child > li {
     border: none;
   }
+  #header > div:last-child > nav > ul a:hover {
+    background-color: #C4C4C4;
+  }
   #header > div:nth-last-child(2) {
     display: none;
   }
@@ -303,6 +310,11 @@ hr {
 @media (min-width: 1500px) {
   #header, .main {
     max-width: 1500px;
+  }
+
+  #header {
+    width: 85%;
+    margin: 0 auto;
   }
 }
 
