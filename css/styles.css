@@ -278,6 +278,9 @@ hr {
     display: flex;
     justify-content: flex-start;
   }
+  #header > div:first-child {
+    margin-right: 20px;
+  }
   #header > div:last-child {
     display: inline-block;
     margin-left: auto;
