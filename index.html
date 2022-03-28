@@ -14,71 +14,62 @@
 <body>
 
   <section class="container__header">
+
     <header id="header">
       <div id="cont__img">
         <img src="./img/Ellipse 13.png" alt="logo">
       </div>
+
       <div id="cont--title">
         <h2>Controle Financeiro</h2>
       </div>
+
       <div id="menu--hamburguer">
         <a class="show-action icon-menu" href="#box-1">
           <i class="fa-solid fa-bars fa-2x"></i>
         </a>         
       </div>
-      <div id="menu--pc">
-        <nav>
-          <ul>
-            <a href="#">
-              <li>Dashboard</li>
+
+      <div class="menu_mobile hide-action">
+        <div id="box-1">
+          <nav class="show" >
+            <a class="hide-action move" href="#">
+              <i class="fa-solid fa-xmark fa-2x"></i>
             </a>
-            <a href="#">
-              <li>Resumo</li>
-            </a>
-            <a href="#">
-              <li>Configurações</li>
-            </a>
-          </ul>
-        </nav>
+            <ul>
+              <a href="#"><li>Resumo</li></a>
+              <a href="#"><li>Dashboard</li></a>
+              <a href="#"><li>Configurações</li></a>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
-
-    <section class="menu_mobile hide-action">
-      <div id="box-1">
-        <nav class="mostrar" >
-          <ul>
-            <a href="#"><li>Resumo</li></a>
-            <a href="#"><li>Dashboard</li></a>
-            <a href="#"><li>Configurações</li></a>
-          </ul>
-          <a class="hide-action move" href="#">
-            <i class="fa-solid fa-xmark fa-2x"></i>
-          </a>
-        </nav>
-      </div>
-    </section>
-  </section> 
+  </section>
 
   <section class="main">
     <section class="container_form">
+      <h1 class="title">Nova Transação</h1>
     <div class="form--fild">
       <form action="" class="form">
-        <div>
-          <label for="compra">Tipo de transação</label>
-          <input type="select"  placeholder="Compra" id="compra">
+        <div class="cont-data">
+          <div>
+            <label for="compra">Tipo de transação</label>
+            <input type="select"  placeholder="Compra" id="compra">
+          </div>
+          <div>
+            <label for="mercadoria">Nome da mercadoria</label>
+            <input type="text" placeholder="Input" id="mercadoria">
+          </div>
+          <div>
+            <label for="valor">Valor</label>
+            <input type="text"  placeholder="R$0,00" id="valor">
+          </div>
         </div>
-        <div>
-          <label for="mercadoria">Nome da mercadoria</label>
-          <input type="text" placeholder="Input" id="mercadoria">
-        </div>
-        <div>
-          <label for="valor">Valor</label>
-          <input type="text"  placeholder="R$0,00" id="valor">
+        <div class="div_btn" >
+          <button class="btn">Adicionar transação</button>
         </div>
       </form>
-      <div class="div_btn" >
-        <button class="btn">Adicionar transação</button>
-      </div>
     </div>
     </section>
   <hr>
@@ -92,25 +83,25 @@
       </div>
     </div>
 
-    <div class="line_1">
+    <div class="line">
         <p>+</p>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
         <p>R$12.999.99</p>
     </div>
 
-    <div class="line_2">
+    <div class="line">
       <p>-</p>
       <p>Lorem, ipsum dolor.</p>
       <p>R$99,99</p>
     </div>
 
-    <div class="line_3">
+    <div class="line">
       <p>+</p>
       <p>Lorem, ipsum.</p>
       <p>R$9,99</p>
     </div>
 
-    <div class="line_4">
+    <div class="line">
       <p>Total</p>
       <p>R$12.909,99</p>
       </div>

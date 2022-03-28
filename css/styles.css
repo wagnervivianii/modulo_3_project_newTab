@@ -15,12 +15,22 @@
 .container__header > header {
   width: 90%;
   margin: 0 auto;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1300px;
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
   flex-wrap: nowrap;
   padding: 20px 0;
+}
+.container__header > header > #cont__img {
+  max-width: 900px;
+}
+.container__header > header > #cont--title > h2 {
+  font-size: 20px;
+  max-width: 1450px;
 }
 .container__header > header > #menu--hamburguer {
   display: flex;
@@ -33,63 +43,61 @@
   color: #333333;
   text-decoration: none;
 }
-
-.menu_mobile {
+.container__header > header > .menu_mobile {
   width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
   position: fixed;
   top: 0;
 }
-.menu_mobile > #box-1 .mostrar,
-.menu_mobile #box-1 .hide-action {
+.container__header > header > .menu_mobile > #box-1 .show,
+.container__header > header > .menu_mobile #box-1 .hide-action {
   display: none;
 }
-.menu_mobile > #box-1:target .mostrar,
-.menu_mobile #box-1:target .hide-action {
+.container__header > header > .menu_mobile > #box-1:target .show,
+.container__header > header > .menu_mobile #box-1:target .hide-action {
   display: block;
 }
-.menu_mobile > #box-1 > nav {
+.container__header > header > .menu_mobile > #box-1 {
+  float: right;
+}
+.container__header > header > .menu_mobile > #box-1 > nav {
   width: 85vw;
   height: 100vh;
   background-color: #333333;
-  float: right;
-  margin-top: 0;
 }
-.menu_mobile > #box-1 > nav > ul {
-  width: 100%;
+.container__header > header > .menu_mobile > #box-1 > nav > ul {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  margin-top: 62px;
+  text-align: center;
+  width: 100%;
+  margin-top: 60px;
 }
-.menu_mobile > #box-1 > nav > ul > a {
+.container__header > header > .menu_mobile > #box-1 > nav > ul > a {
+  width: 100%;
   color: #FFFFFF;
 }
-.menu_mobile > #box-1 > nav > ul > a > li {
-  margin-right: 25px;
+.container__header > header > .menu_mobile > #box-1 > nav > ul > a > li {
+  width: 100%;
   font-size: 16px;
   font-weight: 600;
   line-height: 19px;
   padding: 10px 0;
 }
-.menu_mobile > #box-1 > nav > ul > a:hover {
-  width: 100%;
-  background-color: #C4C4C4;
-  text-align: end;
-  margin-right: auto;
+.container__header > header > .menu_mobile > #box-1 > nav > ul > a:hover {
+  background-color: #FFFFFF;
   color: #333333;
 }
-.menu_mobile > #box-1 > nav > a {
-  position: fixed;
-  top: 15px;
-  margin-left: 15px;
+.container__header > header > .menu_mobile > #box-1 > nav > a > i {
+  margin-top: 0;
   color: #FFFFFF;
+  margin: 10px 0 0 20px;
 }
 
 .container_form {
   width: 90%;
   margin: 0 auto;
+}
+.container_form > h1 {
+  display: none;
 }
 .container_form > div > form {
   display: flex;
@@ -98,37 +106,41 @@
   align-items: flex-start;
 }
 .container_form > div > form > div {
+  margin-top: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.container_form > div > form > div > input {
-  padding: 5px;
-  margin-top: 2px;
+.container_form > div > form > div > div > input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
   border-radius: 4px;
   border: solid 1px #979797;
   color: #333333;
 }
-.container_form > div > form > div > label {
-  margin-top: 15px;
+.container_form > div > form > div > div > label {
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+  padding-top: 10px;
   font-size: 14px;
   line-height: 22px;
-  color: #333333;
 }
-.container_form > div > .div_btn > button {
-  margin-top: 15px;
+.container_form > div > form > .div_btn > button {
   width: 100%;
-  background-color: #333333;
   border-radius: 4px;
   padding: 7px 0;
   color: #FFFFFF;
   margin-bottom: 20px;
+  margin-top: 15px;
+  background-color: #333333;
 }
 
 hr {
   width: 90%;
   margin: 10px auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   border: solid 1px #979797;
 }
 
@@ -145,7 +157,7 @@ hr {
   color: #333333;
 }
 .container_extract .head {
-  font-weight: 600;
+  font-weight: 700;
   color: #333333;
 }
 .container_extract > div:nth-child(2), .container_extract div:nth-child(3), .container_extract div:nth-child(4), .container_extract div:nth-child(5), .container_extract div:nth-child(6) {
@@ -171,6 +183,9 @@ hr {
 .container_extract > div:nth-last-child(1) {
   border: none;
 }
+.container_extract > div:nth-last-child(1) > p {
+  font-weight: 600;
+}
 
 .container_footer > div {
   width: 100%;
@@ -183,11 +198,6 @@ hr {
   border-bottom: solid 10px #333333;
 }
 
-@media (min-width: 100px) {
-  #header > div:last-child {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
   hr {
     display: none;
@@ -199,50 +209,71 @@ hr {
 
   .container_form {
     border: solid 1px #979797;
+    border-radius: 4px;
     padding: 20px 20px;
     margin: 20px auto;
+    height: auto;
+  }
+  .container_form > h1 {
+    display: block;
+    text-align: center;
+    font-size: 18px;
   }
   .container_form > div > form {
     display: flex;
+    flex-direction: column;
+  }
+  .container_form > div > form > div:first-child {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
   }
-  .container_form > div > form > input {
-    padding: 1px;
+  .container_form > div > form > div:first-child > div {
+    padding: 0 10px;
   }
-  .container_form > div > form > div:first-child, .container_form > div > form > div:last-child {
-    width: 25%;
+  .container_form > div > form > div:first-child > div:first-child, .container_form > div > form > div:first-child div:last-child {
+    width: 30%;
   }
-  .container_form > div > form > div:first-child > label, .container_form > div > form > div:last-child > label {
+  .container_form > div > form > div:first-child > div:nth-child(2) {
+    width: 70%;
+  }
+  .container_form > div > form > div:first-child > div:nth-child(2) > label {
     width: 100%;
   }
-  .container_form > div > form > div:first-child > input, .container_form > div > form > div:last-child > input {
+  .container_form > div > form > div:first-child > div:nth-child(2) > input {
     width: 100%;
   }
-  .container_form > div > form > div:nth-child(2) {
+  .container_form > div > form > div:first-child > div:nth-child(2) {
     width: 45%;
   }
-  .container_form > div > form > div:nth-child(2) > input {
+  .container_form > div > form > div:first-child > div:nth-child(2) > input {
     width: 100%;
   }
-  .container_form > div > form > div:last-child > input {
+  .container_form > div > form > div:first-child > div:last-child > input {
     margin-left: auto;
   }
-  .container_form > div > form > div:last-child > label {
+  .container_form > div > form > div:first-child > div:last-child > label {
     margin-left: auto;
     margin-right: 87px;
   }
-  .container_form > div > .div_btn {
-    display: flex;
-    justify-content: flex-end;
+  .container_form > div > form > div:last-child {
     width: 100%;
   }
-  .container_form > div > .div_btn > button {
+  .container_form > div > form > div:last-child > button {
     width: 30%;
+    display: inline;
+    margin-left: auto;
+    margin: 5px 10px 0 auto;
+    padding: 10px 0;
   }
 
+  #header {
+    width: 90%;
+  }
   #header > div:last-child {
-    display: none;
+    display: block;
+  }
+  #header > div:last-child > #box-1 > nav {
+    width: 40vw;
   }
 }
 @media (min-width: 1112px) {
@@ -250,73 +281,101 @@ hr {
     width: 93%;
     margin: 30px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
   }
   .main > .container_form {
     width: 40%;
-    height: 344px;
-    margin: 0 auto;
+    height: auto;
+    margin: 0 0;
   }
   .main > .container_form > div > form {
     display: flex;
     flex-direction: column;
   }
-  .main > .container_form > div > form > div {
+  .main > .container_form > div > form > div:first-child {
+    display: flex;
+    flex-direction: column;
+  }
+  .main > .container_form > div > form > div:first-child > div {
     width: 100%;
   }
-  .main > .container_form > div > div > button {
+  .main > .container_form > div > form > div:first-child > div > input, .main > .container_form > div > form > div:first-child > div label {
+    width: 100%;
+  }
+  .main > .container_form > div > form > div:last-child > button {
     width: 100%;
   }
   .main > .container_extract {
+    padding: 0 15px;
+    margin: 0 0;
     width: 55%;
     height: 281px;
-    border: solid 1px #979797;
+  }
+  .main > .container_extract > .head {
+    font-weight: bold700;
   }
 
   #header {
+    width: 80%;
     display: flex;
     justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   #header > div:first-child {
     margin-right: 20px;
   }
-  #header > div:last-child {
-    display: inline-block;
-    margin-left: auto;
+  #header > div:nth-last-child(2) {
+    display: none;
   }
-  #header > div:last-child > nav > ul {
-    display: flex;
+  #header > div:last-child {
+    position: static;
+  }
+  #header > div:last-child > #box-1 .show,
+#header > div:last-child > #box-1 .hide-action {
+    display: block;
+  }
+  #header > div:last-child > #box-1 > nav {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
     background-color: #FFFFFF;
   }
-  #header > div:last-child > nav > ul > a {
+  #header > div:last-child > #box-1 > nav > a > i {
+    display: none;
+  }
+  #header > div:last-child > #box-1 > nav > ul {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+  }
+  #header > div:last-child > #box-1 > nav > ul > a {
     font-size: 4px;
     padding: 10px 0;
   }
-  #header > div:last-child > nav > ul > a > li {
+  #header > div:last-child > #box-1 > nav > ul > a > li {
     padding: 0 20px;
     font-size: 16px;
     font-weight: 600;
     color: #333333;
     border-right: solid 1px #979797;
   }
-  #header > div:last-child > nav > ul a:last-child > li {
+  #header > div:last-child > #box-1 > nav > ul a:last-child > li {
     border: none;
   }
-  #header > div:last-child > nav > ul a:hover {
+  #header > div:last-child > #box-1 > nav > ul a:hover {
     background-color: #C4C4C4;
   }
-  #header > div:nth-last-child(2) {
-    display: none;
-  }
 }
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
   #header, .main {
     max-width: 1500px;
   }
 
   #header {
-    width: 85%;
+    width: 88%;
     margin: 0 auto;
   }
 }

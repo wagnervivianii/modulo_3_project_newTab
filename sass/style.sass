@@ -13,12 +13,21 @@
   background-color: $top-color
   > header
     @include scren_90
+    margin: 0 auto
+    width: 90%
+    max-width: 1300px
     display: flex
     justify-content: space-between
     align-content: center
     align-items: center
     flex-wrap: nowrap
     padding: 20px 0
+    >#cont__img
+      max-width: 900px
+    >#cont--title
+      >h2
+        font-size: 20px
+        max-width: 1450px
     > #menu--hamburguer
       display: flex
       align-content: center
@@ -28,52 +37,50 @@
       > a:visited
         color: $text-color
         text-decoration: none
-.menu_mobile
-  width: 100%
-  display: flex
-  flex-direction: row-reverse
-  position: fixed
-  top: 0
-  > #box-1 .mostrar,
-    #box-1 .hide-action
-      display: none
-  > #box-1:target .mostrar,
-    #box-1:target .hide-action
-      display: block
-  > #box-1
-    > nav
-      width: 85vw
-      height: 100vh
-      background-color: $text-color
-      float: right
-      margin-top: 0
-      > ul
-        width: 100%
-        display: flex
-        flex-direction: column
-        align-items: end
-        margin-top: 62px
-        > a
-          color: $back-cont-color
-          > li
-            margin-right: 25px
-            font-size: 16px
-            font-weight: 600
-            line-height: 19px
-            padding: 10px 0
-        > a:hover
-          width: 100%
-          background-color: $hover-color
-          text-align: end
-          margin-right: auto
-          color: $text-color   
-      > a
-        position: fixed
-        top: 15px
-        margin-left: 15px
-        color: #FFFFFF
+    >.menu_mobile
+      width: 100%
+      position: fixed
+      top: 0
+      > #box-1 .show,
+        #box-1 .hide-action
+          display: none
+      > #box-1:target .show,
+        #box-1:target .hide-action
+          display: block
+      > #box-1
+        float: right
+        > nav
+          width: 85vw
+          height: 100vh
+          background-color: $text-color
+          > ul
+            display: flex
+            flex-direction: column
+            text-align: center
+            
+            width: 100%
+            margin-top: 60px
+            > a
+              width: 100%
+              color: $back-cont-color
+              > li
+                width: 100%
+                font-size: 16px
+                font-weight: 600
+                line-height: 19px
+                padding: 10px 0
+            > a:hover
+                background-color: $back-cont-color
+                color: $text-color       
+          > a
+            > i
+              margin-top: 0
+              color: $back-cont-color 
+              margin: 10px 0 0 20px
 .container_form
   @include scren_90
+  >h1
+    display: none
   >div
     >form
       display: flex
@@ -81,33 +88,38 @@
       flex-wrap: nowrap
       align-items: flex-start
       >div
+        margin-top: 10px
         width: 100%
         display: flex
         flex-direction: column
-        >input
-          padding: 5px
-          margin-top: 2px
+        >div
+          >input
+            width: 100%
+            padding: 10px
+            margin-top: 5px
+            border-radius: 4px
+            border: solid 1px #979797
+            color: $text-color
+          >label
+            width: 100%
+            display: inline-block
+            margin-top: 10px
+            padding-top: 10px
+            font-size: 14px
+            line-height: 22px
+      >.div_btn
+        >button
+          width: 100%
           border-radius: 4px
-          border: solid 1px #979797
-          color: $text-color
-        >label
+          padding: 7px 0
+          color: $back-cont-color
+          margin-bottom: 20px
           margin-top: 15px
-          font-size: 14px
-          line-height: 22px
-          color: $text-color
-    >.div_btn
-      >button
-        margin-top: 15px
-        width: 100%
-        background-color: #333333
-        border-radius: 4px
-        padding: 7px 0
-        color: $back-cont-color
-        margin-bottom: 20px         
+          background-color: $text-color         
 hr
   width: 90%
   margin: 10px auto
-  margin-bottom: 50px
+  margin-bottom: 30px
   border: solid 1px #979797
 .container_extract
   @include scren_90
@@ -120,7 +132,7 @@ hr
       text-align: center
       color: $text-color
   .head
-    font-weight: 600   
+    font-weight: 700
     color: $text-color
   >div:nth-child(2),div:nth-child(3),div:nth-child(4),div:nth-child(5),div:nth-child(6)
     display: flex
@@ -139,6 +151,8 @@ hr
     border-bottom: double 3px $input-border-color
   >div:nth-last-child(1)
     border: none
+    >p
+      font-weight: 600
 .container_footer
   >div
     width: 100%
@@ -148,10 +162,6 @@ hr
       width: 100%
       height: 100vh
       border-bottom: solid 10px $text-color   
-@media (min-width: 100px)
-  #header
-    >div:last-child
-      display: none
 @media (min-width: 768px)
   hr
     display: none
@@ -161,98 +171,137 @@ hr
         width: 222px
   .container_form
     border: solid 1px #979797
+    border-radius: 4px
     padding: 20px 20px
     margin: 20px auto
+    height: auto
+    >h1
+      display: block
+      text-align: center
+      font-size: 18px
     >div
       >form
         display: flex
-        flex-direction: row
-        justify-content: space-between
-        >input
-          padding: 1px
-        >div:first-child, >div:last-child
-          width: 25%
-          >label
-            width: 100%
-          >input
-            width: 100%
-        >div:nth-child(2)
-          width: 45%
-          >input
-            width: 100%
+        flex-direction: column
+        >div:first-child
+          display: flex
+          flex-direction: row
+          >div
+            padding: 0 10px
+          >div:first-child, div:last-child
+            width: 30%
+          >div:nth-child(2)
+            width: 70%
+            >label
+              width: 100%
+            >input
+              width: 100%
+          >div:nth-child(2)
+            width: 45%
+            >input
+              width: 100%
+          >div:last-child
+              >input
+                margin-left: auto
+              >label
+                margin-left: auto
+                margin-right: 87px
         >div:last-child
-          >input
+          width: 100%
+          >button
+            width: 30%
+            display: inline
             margin-left: auto
-          >label
-            margin-left: auto
-            margin-right: 87px
-      >.div_btn
-        display: flex
-        justify-content: flex-end
-        width: 100%
-        >button
-          width: 30%
+            margin: 5px 10px 0 auto
+            padding: 10px 0        
   #header
+    width: 90%
     >div:last-child
-      display: none
+      display: block
+      >#box-1
+        >nav
+          width: 40vw
 @media (min-width: 1112px)
   .main
     width: 93%
     margin: 30px auto
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: flex-start
     >.container_form
       width: 40%
-      height: 344px
-      margin: 0 auto
+      height: auto
+      margin: 0 0
       >div
         >form
           display: flex
           flex-direction: column
-          >div
-            width: 100%
-        >div
-          >button
-            width: 100%
+          >div:first-child
+            display: flex
+            flex-direction: column
+            >div
+              width: 100%
+              >input , label
+                width: 100%
+          >div:last-child
+            >button
+              width: 100%
     >.container_extract
+      padding: 0 15px
+      margin: 0 0
       width: 55%
       height: 281px
-      border: solid 1px #979797
+      >.head
+        font-weight: bold700
   #header
+    width: 80%
     display: flex
     justify-content: flex-start
+    max-width: 1200px
+    margin: 0 auto
     >div:first-child
       margin-right: 20px
-    >div:last-child
-      display: inline-block
-      margin-left: auto
-      >nav
-        >ul
-          display: flex
-          background-color: $back-cont-color
-          >a
-            font-size: 4px
-            padding: 10px 0
-            >li
-              padding: 0 20px
-              font-size: 16px
-              font-weight: 600
-              color: $text-color
-              border-right: solid 1px $input-border-color
-          a:last-child
-            >li
-              border: none
-          a:hover
-            background-color: $hover-color
-               
     >div:nth-last-child(2)
       display: none
-@media (min-width: 1500px)
+    >div:last-child
+      position: static
+      > #box-1
+        .show,
+        .hide-action
+          display: block
+        >nav
+          width: 100%
+          height: 40px
+          margin-top: 20px
+          background-color: $back-cont-color
+          >a
+            >i
+              display: none        
+          >ul
+            margin-top: 0
+            display: flex
+            flex-direction: row
+            background-color: $back-cont-color
+            >a
+              font-size: 4px
+              padding: 10px 0
+              >li
+                padding: 0 20px
+                font-size: 16px
+                font-weight: 600
+                color: $text-color
+                border-right: solid 1px $input-border-color
+            a:last-child
+              >li
+                border: none
+            a:hover
+              background-color: $hover-color       
+      
+@media (min-width: 1200px)
   #header, .main 
     max-width: 1500px
   #header
-    width: 85%
+    width: 88%
     margin: 0 auto
     
         
