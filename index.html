@@ -37,9 +37,8 @@
               <i class="fa-solid fa-xmark fa-2x"></i>
             </a>
             <ul>
-              <a href="#"><li>Resumo</li></a>
-              <a href="#"><li>Dashboard</li></a>
-              <a href="#"><li>Configurações</li></a>
+              <a href="#"><li>Cadastro de transações</li></a>
+              <a href="#"><li>Limpar dados</li></a>
             </ul>
           </nav>
         </div>
@@ -55,15 +54,19 @@
         <div class="cont-data">
           <div>
             <label for="compra">Tipo de transação</label>
-            <input type="select"  placeholder="Compra" id="compra">
+            <select type="muliple"  placeholder="Compra" id="select"> 
+              <option value="Venda">Venda</option>
+              <option value="Compra">Compra</option>
+
+            </select>
           </div>
           <div>
             <label for="mercadoria">Nome da mercadoria</label>
-            <input type="text" placeholder="Input" id="mercadoria">
+            <input type="text" placeholder="mercadoria" id="mercadoria" onkeypress="field_validation_text(event)" required >
           </div>
           <div>
             <label for="valor">Valor</label>
-            <input type="text"  placeholder="R$0,00" id="valor">
+            <input type="text" size="14" placeholder="R$0,00" id="value" onkeyup="fields_validation_num(this,event)" onfocus="this.value=''" required >
           </div>
         </div>
         <div class="div_btn" >
@@ -115,6 +118,8 @@
       <footer></footer>
     </div>
   </section>
+  
+  <script src="./js/index.js"></script>
 </body>
 </html>
 
