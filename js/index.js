@@ -1,12 +1,17 @@
 // Validation and formatting of text fields
 function field_validation_text(e){
   e.preventDefault();
-  const regText = /[a-z\s]+/gi;
+  // regular expression to only allow lalphas and spaces
+  const regText = /[a-zA-Z\s]/gi;
+  // testing expression and limiting number of characters
   if(regText.test(e.key) && e.target.value.length < 40){
-    e.target.value += e.key   
-  }
+  //capital first letter
+  e.target.value += (e.target.value.length == 0 ? e.key.toUpperCase() : e.key.toLowerCase());
+  // removing unnecessary spacing between words
   text = e.target.value.replace(/\s{2,}/g, ' ');
-  e.target.value = text.toUpperCase();
+  // returning treated value to input
+  e.target.value = text
+  }
 }
 
 String.prototype.reverse = function(){
@@ -33,15 +38,14 @@ function fields_validation_num(campo,evento){
 
 function insertValue(e){
   e.preventDefault();
+  let newDiv = document.createElement('div');
+  let opt = document.getElementById('select');
   let val = document.getElementById('value');
   let merc = document.getElementById('mercadoria');
   let extract = document.querySelector('.container_extract');
   let ExtractHead = document.querySelector('.head').nextSibling;
-  let newDiv = document.createElement('div');
-  let newP = document.createElement('p');
-  var op = document.querySelector('select option');
   let newEntrance = {
-    operation : (op.value == 'Venda' ? '+' : '-'),
+    operation :(opt.options[opt.selectedIndex].value == 'Venda' ? '+' : '-'),
     merc: merc.value,
     val: val.value
   }
@@ -67,5 +71,3 @@ function insertValue(e){
   console.log(op.value);
 
 }
-
-  
