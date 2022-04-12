@@ -50,13 +50,13 @@
     <section class="container_form">
       <h1 class="title">Nova Transação</h1>
     <div class="form--fild">
-      <form action="" class="form">
+      <form onsubmit="insertValue(event)" class="form">
         <div class="cont-data">
           <div>
             <label for="compra">Tipo de transação</label>
             <select type="muliple"  placeholder="Compra" id="select"> 
-              <option value="Venda">Venda</option>
-              <option value="Compra">Compra</option>
+              <option id="venda"  value="Venda">Venda</option>
+              <option id='compra' value="Compra">Compra</option>
 
             </select>
           </div>
