@@ -38,36 +38,96 @@ function fields_validation_num(campo,evento){
 
 function insertValue(e){
   e.preventDefault();
-  let newDiv = document.createElement('div');
-  let opt = document.getElementById('select');
-  let val = document.getElementById('value');
-  let merc = document.getElementById('mercadoria');
-  let extract = document.querySelector('.container_extract');
-  let ExtractHead = document.querySelector('.head').nextSibling;
-  let newEntrance = {
-    operation :(opt.options[opt.selectedIndex].value == 'Venda' ? '+' : '-'),
-    merc: merc.value,
-    val: val.value
-  }
-  if(val.value.length < 6) {
+
+  if(document.querySelector('#value').value.length < 6) {
     alert("Insira um valor válido, com no mínimo 3 dígitos");
     val.value = '';
     val.focus();
     return false
   }
-  else if(merc.value.length < 2){
+
+  else if(document.querySelector('#mercadoria').value.length < 2){
     alert("Insira ao menos dois caracteres para descrever a mercadoria");
     merc.value = '';
     merc.focus();
+    return false
+  }
+  // create a variable of list for storage
+  if(localStorage.getItem('list') !=null ){
+    let list = localStorage.getItem('list');
+    let objList = JSON.parse(list);
+
+    let newEntrance = {
+      operation : document.getElementById('select').options[document.getElementById('select').selectedIndex].value == 'Venda' ? '+' : '-',
+      merc: document.querySelector('#mercadoria').value,
+      val: document.querySelector('#value').value
+    }
+    objList.push(newEntrance);
+    localStorage.setItem('list', JSON.stringify(objList))
+    document.querySelector('#mercadoria').value = ""
+    document.querySelector('#value').value = ""
+    let nodeList = document.querySelectorAll('div.delDiv')
+    for(let i = nodeList.length - 1; i >= 0; i--) {
+      nodeList[i].remove();
+    }
+    loadStorage()
   }
   else{
-    Object.values(newEntrance).forEach(function(item){
-      let newP = document.createElement('p');
-      newP.textContent = item;
-      newDiv.appendChild(newP);
-    })
-  extract.insertBefore(newDiv, ExtractHead)
+    let newEntrance = {
+      operation : document.getElementById('select').options[document.getElementById('select').selectedIndex].value == 'Venda' ? '+' : '-',
+      merc: document.querySelector('#mercadoria').value,
+      val: document.querySelector('#value').value
+    }
+    list = []
+    list.push(newEntrance);
+    localStorage.setItem('list', JSON.stringify(list))
+    document.querySelector('#mercadoria').value = ""
+    document.querySelector('#value').value = ""
+    loadStorage()
   }
-  console.log(op.value);
+}  
+  
+function loadStorage(){
+  let newP = document.createElement('p');
+  let contExtrato = document.querySelector('.container_extract');
+  let contHead = document.querySelector('.head').nextSibling;
+  let main = document.querySelector('.main');
+  let newDiv = document.createElement('div');
+  newDiv.setAttribute('class','delDiv')
+  if(localStorage.getItem('list')!= null){
+    list = localStorage.getItem('list')
+    let objectList = JSON.parse(list)
 
+    for(itens of objectList){
+      Object.values(itens).forEach(function(item){
+        let newP = document.createElement('p');
+        newP.textContent = item;
+        newDiv.appendChild(newP);
+      })
+      if(objectList.length > 1){
+        contExtrato.insertBefore(newDiv, contHead);
+        newDiv = document.createElement('div');
+        newDiv.setAttribute('class','delDiv')
+      }
+      else{
+        contExtrato.style.display = 'flex';
+        document.querySelector('.insertP').style.display ='none';
+        contExtrato.insertBefore(newDiv, contHead);
+        newDiv.setAttribute('class','delDiv')
+      }
+
+    }
+  }
+  else{
+    contExtrato.style.display = 'none';
+    newP.textContent = "Nenhuma transação Realizada";
+    newDiv.appendChild(newP);
+    newP.setAttribute('class','insertP')
+    main.appendChild(newDiv);
+
+  }
+    
 }
+
+
+  
