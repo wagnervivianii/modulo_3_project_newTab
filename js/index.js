@@ -125,8 +125,7 @@ function loadStorage(){
     newP.setAttribute('class','insertP')
     main.appendChild(newDiv);
 
-  }
-    
+  }   
 }
 
 
