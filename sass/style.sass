@@ -150,11 +150,25 @@ hr
       color: $text-color
   .head
     margin: 0 auto
-    width:85%
+    width:100%
     display: flex
     justify-content: space-between
     font-weight: 700
-    color: $text-color    
+    color: $text-color
+    border-bottom: solid 1px $input-border-color 
+    >p:first-child
+      margin-left: 40px
+    >p:last-child
+      margin-right: 40px
+  .line
+    >div
+      font-weight: 700
+      p:last-child
+        text-align: right
+        margin: 0
+        font-Weight: normal
+
+
   >.delDiv
     display: flex
     flex-wrap: nowrap
@@ -257,7 +271,7 @@ hr
       >#box-1
         >nav
           width: 40vw
-@media (min-width: 1100px)
+@media (min-width: 1112px)
   .container__header
     >#header
       width: 80%

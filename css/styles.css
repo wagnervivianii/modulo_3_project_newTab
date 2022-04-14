@@ -181,11 +181,26 @@ hr {
 }
 .container_extract .head {
   margin: 0 auto;
-  width: 85%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-weight: 700;
   color: #333333;
+  border-bottom: solid 1px #979797;
+}
+.container_extract .head > p:first-child {
+  margin-left: 40px;
+}
+.container_extract .head > p:last-child {
+  margin-right: 40px;
+}
+.container_extract .line > div {
+  font-weight: 700;
+}
+.container_extract .line > div p:last-child {
+  text-align: right;
+  margin: 0;
+  font-Weight: normal;
 }
 .container_extract > .delDiv {
   display: flex;
@@ -321,7 +336,7 @@ hr {
     width: 40vw;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1112px) {
   .container__header > #header {
     width: 80%;
     display: flex;
