@@ -108,7 +108,7 @@ function loadStorage(){
         newP.textContent = item;
         newDiv.appendChild(newP);
       })
-      if(objectList.length == 1){
+      if(objectList.length <= 1){
           document.querySelector('.delDivNothing').remove();
         }
         newDiv.setAttribute('class','delDiv')
@@ -131,7 +131,7 @@ function loadStorage(){
 
     if(sum > 0){
       let sizeGain = document.querySelectorAll('p.delP').length
-      if(sizeGain > 0){
+      if(sizeGain >= 1){
         document.querySelector('.delP').remove();
       }
       newP = document.createElement('p');
@@ -162,6 +162,23 @@ function loadStorage(){
     newP.setAttribute('class','insertP')
     contExtrato.appendChild(newDiv);
   }   
+}
+
+function clearData(){
+  if(localStorage.getItem('list') != null){
+    let text = 'Deseja realmente excluir todos os itens cadastrados?\nClick em OK para excluir ou Cancelar para sair'
+    if(confirm(text) == true){
+      localStorage.clear();
+      loadStorage()
+      alert('Todos os registros foram apagados!')
+    }
+    else{
+      alert('Operação cancelada, os registros foram mantidos!')
+    }
+  }
+  else{
+    alert('Não existem dados a serem removidos!')
+  } 
 }
 
 

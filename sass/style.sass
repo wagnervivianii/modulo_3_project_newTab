@@ -15,7 +15,7 @@
     @include scren_90
     margin: 0 auto
     width: 90%
-    max-width: 1300px
+    max-width: 1100px
     display: flex
     justify-content: space-between
     align-content: center
@@ -23,11 +23,11 @@
     flex-wrap: nowrap
     padding: 20px 0
     >#cont__img
-      max-width: 900px
+      max-width: 1100px
     >#cont--title
       >h2
         font-size: 20px
-        max-width: 1450px
+        max-width: 1100px
     > #menu--hamburguer
       display: flex
       align-content: center
@@ -60,7 +60,6 @@
             display: flex
             flex-direction: column
             text-align: center
-            
             width: 100%
             margin-top: 60px
             > a
@@ -137,13 +136,15 @@ hr
   margin-bottom: 30px
   border: solid 1px #979797
 .container_extract
+  max-width: 1100px
   @include scren_90
   height: auto
   line-height: 30px
   display: flex
   flex-direction: column
   justify-content: space-around
-  >div
+  >.title
+    max-width:1100px
     >h1
       text-align: center
       color: $text-color
@@ -179,8 +180,8 @@ hr
       font-weight: 600
   >.delDivNothing
     width: 90%
-    display: flex
-    justify-content: center
+    max-width: 1100px
+    text-align: center
     >.insertP
       width: 100%
   >.line
@@ -256,9 +257,63 @@ hr
       >#box-1
         >nav
           width: 40vw
-@media (min-width: 1112px)
+@media (min-width: 1100px)
+  .container__header
+    >#header
+      width: 80%
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      max-width: 1100px
+      margin: 0 auto
+      >div:first-child
+        margin-right: 20px
+      >div:nth-last-child(2)
+        display: none
+      >div:last-child
+        width: 80%
+        max-width: 1100px
+        display: flex
+        justify-content: flex-end
+        align-content: center           
+        > #box-1
+          .show,
+          .hide-action
+            max-width: 1100px
+            display: block
+            align-items: center
+          >nav
+            width: 100%
+            height: 40px
+            margin-top: 20px
+            background-color: $back-cont-color
+            >a
+              >i
+                display: none        
+            >ul
+              width: 370px
+              margin-top: 0
+              display: flex
+              flex-direction: row
+              align-items: center
+              background-color: $back-cont-color
+              >a
+                font-size: 4px
+                padding: 10px 0
+                >li
+                  padding: 0 20px
+                  font-size: 14px
+                  font-weight: 600
+                  color: $text-color
+                  border-right: solid 1px $input-border-color
+              a:last-child
+                >li
+                  border: none
+              a:hover
+                background-color: $hover-color             
   .main
-    width: 93%
+    max-width: 1100px
+    width: 90%
     margin: 30px auto
     display: flex
     justify-content: center
@@ -288,55 +343,14 @@ hr
       height: auto
       >.head
         font-weight: bold700
-  #header
-    width: 80%
-    display: flex
-    justify-content: flex-start
-    max-width: 1200px
-    margin: 0 auto
-    >div:first-child
-      margin-right: 20px
-    >div:nth-last-child(2)
-      display: none
-    >div:last-child
-      position: static
-      > #box-1
-        .show,
-        .hide-action
-          display: block
-        >nav
-          width: 100%
-          height: 40px
-          margin-top: 20px
-          background-color: $back-cont-color
-          >a
-            >i
-              display: none        
-          >ul
-            margin-top: 0
-            display: flex
-            flex-direction: row
-            background-color: $back-cont-color
-            >a
-              font-size: 4px
-              padding: 10px 0
-              >li
-                padding: 0 20px
-                font-size: 16px
-                font-weight: 600
-                color: $text-color
-                border-right: solid 1px $input-border-color
-            a:last-child
-              >li
-                border: none
-            a:hover
-              background-color: $hover-color             
-@media (min-width: 1200px)
-  #header, .main 
-    max-width: 1500px
-  #header
-    width: 88%
-    margin: 0 auto
+      >.delDivNothing
+        width: 47% 
+// @media (min-width: 1200px)
+//   #header, .main 
+//     max-width: 1100px
+//   #header
+//     width: 88%
+//     margin: 0 auto
     
         
 
