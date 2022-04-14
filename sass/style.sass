@@ -138,7 +138,8 @@ hr
   border: solid 1px #979797
 .container_extract
   @include scren_90
-  height: 281px
+  height: auto
+  line-height: 30px
   display: flex
   flex-direction: column
   justify-content: space-around
@@ -147,9 +148,13 @@ hr
       text-align: center
       color: $text-color
   .head
+    margin: 0 auto
+    width:85%
+    display: flex
+    justify-content: space-between
     font-weight: 700
-    color: $text-color
-  >div:nth-child(2),div:nth-child(3),div:nth-child(4),div:nth-child(5),div:nth-child(6)
+    color: $text-color    
+  >.delDiv
     display: flex
     flex-wrap: nowrap
     justify-content: space-between
@@ -166,8 +171,23 @@ hr
     border-bottom: double 3px $input-border-color
   >div:nth-last-child(1)
     border: none
+    display: flex
+    justify-content: space-between
+    width: 90%
+    margin: 0 auto
     >p
       font-weight: 600
+  >.delDivNothing
+    width: 90%
+    display: flex
+    justify-content: center
+    >.insertP
+      width: 100%
+  >.line
+    >.container_result
+      line-height: 25px
+      >.sum
+        margin: 0
 .container_footer
   >div
     width: 100%
@@ -265,7 +285,7 @@ hr
       padding: 0 15px
       margin: 0 0
       width: 55%
-      height: 281px
+      height: auto
       >.head
         font-weight: bold700
   #header

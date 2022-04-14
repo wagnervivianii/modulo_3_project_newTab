@@ -90,41 +90,77 @@ function insertValue(e){
 function loadStorage(){
   let newP = document.createElement('p');
   let contExtrato = document.querySelector('.container_extract');
-  let contHead = document.querySelector('.head').nextSibling;
-  let main = document.querySelector('.main');
   let newDiv = document.createElement('div');
-  newDiv.setAttribute('class','delDiv')
+  let result = document.querySelector('.sum');
+  let divResult = document.querySelector('.container_result');
+  let contHead = document.querySelector('.head').nextSibling;
+  let sum = 0
+  let numJs = 0
+  let number = 0
+
   if(localStorage.getItem('list')!= null){
     list = localStorage.getItem('list')
     let objectList = JSON.parse(list)
 
-    for(itens of objectList){
+    for(itens of objectList.reverse()){
       Object.values(itens).forEach(function(item){
-        let newP = document.createElement('p');
+        newP = document.createElement('p');
         newP.textContent = item;
         newDiv.appendChild(newP);
       })
-      if(objectList.length > 1){
-        contExtrato.insertBefore(newDiv, contHead);
+      if(objectList.length == 1){
+          document.querySelector('.delDivNothing').remove();
+        }
+        newDiv.setAttribute('class','delDiv')
+        contExtrato.insertBefore(newDiv, contHead);     
         newDiv = document.createElement('div');
-        newDiv.setAttribute('class','delDiv')
-      }
-      else{
-        contExtrato.style.display = 'flex';
-        document.querySelector('.insertP').style.display ='none';
-        contExtrato.insertBefore(newDiv, contHead);
-        newDiv.setAttribute('class','delDiv')
-      }
+    }  
+    let nodeList = document.querySelectorAll('div.delDiv, div.head, div.line')
 
+    for(let i = nodeList.length - 1; i >= 0; i--) {
+      nodeList[i].style.visibility = 'visible';
     }
-  }
+
+    for(i in objectList){
+      numJs = objectList[i].val.replace(/[^\d\,]/g , '');
+      number = numJs.replace(/[\,]/g, '.');
+      (objectList[i].operation === "+") ? sum += parseFloat(number) : sum -= parseFloat(number);
+    }
+
+    result.textContent = sum.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})
+
+    if(sum > 0){
+      let sizeGain = document.querySelectorAll('p.delP').length
+      if(sizeGain > 0){
+        document.querySelector('.delP').remove();
+      }
+      newP = document.createElement('p');
+      newP.textContent = '[lucro]';
+      newP.setAttribute('class','delP');
+      divResult.appendChild(newP);
+    }
+    else if(sum < 0){
+      let sizeGain = document.querySelectorAll('p.delP').length
+      if(sizeGain > 0){
+        document.querySelector('.delP').remove();
+      }
+      newP = document.createElement('p');
+      newP.setAttribute('class','delP')
+      newP.textContent = '[perda]'
+      divResult.appendChild(newP);
+    }
+  }  
   else{
-    contExtrato.style.display = 'none';
+    let nodeList = document.querySelectorAll('div.delDiv, div.head, div.line')
+    for(let i = nodeList.length - 1; i >= 0; i--) {
+      nodeList[i].style.visibility = 'hidden';
+    }
+    // contExtrato.style="display:flex;flex-direction:flex-column;align-items:center;justify-content:center;height:100px"  
     newP.textContent = "Nenhuma transação Realizada";
     newDiv.appendChild(newP);
+    newDiv.setAttribute('class','delDivNothing');
     newP.setAttribute('class','insertP')
-    main.appendChild(newDiv);
-
+    contExtrato.appendChild(newDiv);
   }   
 }
 

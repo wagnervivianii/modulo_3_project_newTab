@@ -57,12 +57,11 @@
             <select type="muliple"  placeholder="Compra" id="select"> 
               <option id="venda"  value="Venda">Venda</option>
               <option id='compra' value="Compra">Compra</option>
-
             </select>
           </div>
           <div>
             <label for="mercadoria">Nome da mercadoria</label>
-            <input type="text" placeholder="mercadoria" id="mercadoria" onkeypress="field_validation_text(event)" required >
+            <input type="text" placeholder="mercadoria" id="mercadoria" onkeypress="field_validation_text(event)" required onfocus="this.value=''" >
           </div>
           <div>
             <label for="valor">Valor</label>
@@ -88,7 +87,9 @@
 
     <div class="line">
       <p>Total</p>
-      <p>R$12.909,99</p>
+      <div class="container_result">  
+        <p class="sum" >R$12.909,99</p>
+      </div>
       </div>
     </div>
 
