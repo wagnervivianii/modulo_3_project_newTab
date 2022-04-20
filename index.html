@@ -14,7 +14,6 @@
 <body>
 
   <section class="container__header">
-
     <header id="header">
       <div id="cont__img">
         <img src="./img/Ellipse 13.png" alt="logo">
@@ -38,7 +37,7 @@
             </a>
             <ul>
               <a href="#"><li>Cadastro de transações</li></a>
-              <a  onclick="clearData()" href="#"><li>Limpar dados</li></a>
+              <a href="#"><li>Limpar dados</li></a>
             </ul>
           </nav>
         </div>
@@ -50,7 +49,7 @@
     <section class="container_form">
       <h1 class="title">Nova Transação</h1>
     <div class="form--fild">
-      <form onsubmit="insertValue(event)" class="form">
+      <form onsubmit="InsertHtmlData()" class="form">
         <div class="cont-data">
           <div>
             <label for="compra">Tipo de transação</label>
@@ -74,25 +73,8 @@
       </form>
     </div>
     </section>
-  <hr>
+    <hr>
     <section class="container_extract">
-    <div class="title">
-      <h1>Extrato de transações</h1>
-    </div>
-    <div class="head">
-      <p>Mercadoria</p>
-      <p>Valor</p>
-      </div>
-    </div>
-
-    <div class="line">
-      <p>Total</p>
-      <div class="container_result">  
-        <p class="sum" >R$12.909,99</p>
-      </div>
-      </div>
-    </div>
-
     </section>
   </section>
   
@@ -102,7 +84,7 @@
     </div>
   </section>
   
-  <script onload="loadStorage()" src="./js/index.js"></script>
+  <script src="./js/index.js" ></script>
 </body>
 </html>
 
