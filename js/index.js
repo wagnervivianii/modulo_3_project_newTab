@@ -71,7 +71,10 @@ function clearFormFIlds(){
   document.getElementById('value').value = ""
 }
 
-function InsertHtmlData(list){
+function InsertHtmlData(e){
+
+  e.preventDefault()
+
   storageInObj()
   if(localStorage.getItem('list')!= null){
     list = JSON.parse(localStorage.getItem('list'));
