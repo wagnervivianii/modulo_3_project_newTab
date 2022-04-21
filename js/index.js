@@ -76,23 +76,127 @@ function InsertHtmlData(e){
   e.preventDefault()
 
   storageInObj()
+
+  tagVerification()
+
+
   if(localStorage.getItem('list')!= null){
     list = JSON.parse(localStorage.getItem('list'));
     callInsert(list)
+    sum();
   }
-  return false
 }
 
 function callInsert (list){
-  let contExtract = document.querySelector('.container_extract');
-  for(i in list){
+  let contLines = document.querySelector("#e-lines");
+  contLines.innerText = ''
+  for(i in list.reverse()){
     let newDiv = document.createElement('div');
     Object.values(list[i]).forEach(function(valor){
       let newP = document.createElement('p');
       newP.textContent = valor
       newDiv.appendChild(newP);
     })
-    contExtract.appendChild(newDiv);
+    contLines.appendChild(newDiv);
   }
 }
+
+function cleanData(){
+  tagVerification()
+  let container = document.querySelector('.container_extract');
+  container.removeChild(container.children[1]).remove
+  container.removeChild(container.children[1]).remove
+  localStorage.clear();
+  newP = document.createElement('p');
+  newP.textContent = "Nenhuma transação realizada"
+  document.querySelector('#e-title').appendChild(newP);
+}
+
+function tagVerification(){
+  if (document.querySelector("#e-head") == null && localStorage.getItem('list') != null) {
+    const newP = document.createElement('p');
+    const newDiv = document.createElement('div');
+    const containnerExtract = document.querySelector('.container_extract');
+
+    newP.textContent = 'Mercadoria'
+    newDiv.appendChild(newP);
+    newDiv.setAttribute('id', 'e-head')
+    const newP2 = document.createElement('p');
+    newP2.textContent = 'Valor'
+    newDiv.appendChild(newP2);
+    containnerExtract.appendChild(newDiv)
+
+    const newDiv2 = document.createElement('div');
+    newDiv2.setAttribute('id', 'e-lines')
+    containnerExtract.appendChild(newDiv2)
+
+    document.querySelector('#e-title p') != null ? document.querySelector('#e-title p').parentNode.removeChild(document.querySelector('#e-title p')) : '';
+
+  }
+  else if(document.querySelector('#e-title p') == null && document.querySelector('#e-lines') == null){
+    newP = document.createElement('p');
+    newP.textContent = "Nenhuma transação realizada"
+    document.querySelector('#e-title').appendChild(newP);
+  }
   
+}
+
+function loadPage(){
+  tagVerification()
+  if(localStorage.getItem('list') != null){
+    list = JSON.parse(localStorage.getItem('list'))
+    callInsert(list)
+    sum()
+  }
+}
+
+function sum(){
+  let soma = 0
+  if(localStorage.getItem('list') != null){
+    objectList = JSON.parse(localStorage.getItem('list'));
+    for(i in objectList){
+      numJs = objectList[i].valor.replace(/[^\d\,]/g , '');
+      number = numJs.replace(/[\,]/g, '.');
+      (objectList[i].tipo === "+") ? soma += parseFloat(number) : soma -= parseFloat(number);
+    }
+
+    if(document.querySelector('#total') == null){
+      const contLines = document.querySelector('#e-lines');
+      const newP = document.createElement('p');
+      const newDiv = document.createElement('div');
+      newDiv.setAttribute('id','total');
+      newP.textContent = 'Total';
+      newDiv.appendChild(newP);
+      const newP2 = document.createElement('p');
+      newP2.textContent = soma.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+      newDiv.appendChild(newP2);
+      contLines.appendChild(newDiv);
+    }
+    else{
+      document.querySelector('#total').lastChild.innerText = soma.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    }
+
+    if(soma > 0){
+      let sizeGain = document.querySelectorAll('p.delP').length
+      if(sizeGain >= 1){
+        document.querySelector('.delP').remove();
+      }
+      let newP = document.createElement('p');
+      newP.textContent = '[lucro]';
+      newP.setAttribute('class','delP');
+      document.querySelector('#total').appendChild(newP)
+    }
+    else if(soma < 0){
+      let sizeGain = document.querySelectorAll('p.delP').length
+      if(sizeGain > 0){
+        document.querySelector('.delP').remove();
+      }
+      let newP = document.createElement('p');
+      newP.setAttribute('class','delP')
+      newP.textContent = '[perda]'
+      document.querySelector('#total').appendChild(newP)
+    }  
+  }
+}
+
+onload = loadPage()
