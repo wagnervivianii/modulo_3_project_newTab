@@ -194,15 +194,30 @@ function sum(){
 
     if(document.querySelector('#total') == null){
       const contLines = document.querySelector('#e-lines');
+
       const newP = document.createElement('p');
+
       const newDiv = document.createElement('div');
+
       newDiv.setAttribute('id','total');
+
       newP.textContent = 'Total';
+
       newDiv.appendChild(newP);
+
       const newP2 = document.createElement('p');
+
+      const newDiv2 = document.createElement('div');
+      newDiv2.setAttribute('id','totalInf')
+
       newP2.textContent = soma.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-      newDiv.appendChild(newP2);
+
+      newDiv2.appendChild(newP2);
+
+      newDiv.appendChild(newDiv2)
+
       contLines.appendChild(newDiv);
+      
     }
     else{
       document.querySelector('#total').lastChild.innerText = soma.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
@@ -216,7 +231,7 @@ function sum(){
       let newP = document.createElement('p');
       newP.textContent = '[lucro]';
       newP.setAttribute('class','delP');
-      document.querySelector('#total').appendChild(newP)
+      document.querySelector('#totalInf').appendChild(newP)
     }
     else if(soma < 0){
       let sizeGain = document.querySelectorAll('p.delP').length
@@ -226,7 +241,7 @@ function sum(){
       let newP = document.createElement('p');
       newP.setAttribute('class','delP')
       newP.textContent = '[perda]'
-      document.querySelector('#total').appendChild(newP)
+      document.querySelector('#totalInf').appendChild(newP)
     }  
   }
 }
