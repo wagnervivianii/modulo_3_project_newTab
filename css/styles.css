@@ -188,15 +188,11 @@ hr {
   text-align: end;
 }
 
-.container_footer > div {
+.container_footer {
   width: 100%;
-  height: 100vh;
-}
-.container_footer > div > footer {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  border-bottom: solid 10px #333333;
+  position: fixed;
+  bottom: 0;
+  border: solid 5px #333333;
 }
 
 @media (min-width: 768px) {
