@@ -8,73 +8,59 @@
   text-decoration: none
   list-style: none
 .container__header
-  width: 100%
   max-height: 100px
   background-color: $top-color
   > header
-    @include scren_90
-    margin: 0 auto
-    width: 90%
+    width: 100%
     max-width: 1100px
+    max-height: 70px
+    position: relative
     display: flex
+    align-items: center
+    justify-content: space-around
     flex-wrap: nowrap
-    justify-content: space-between
-    padding: 20px 0
-    >#cont__img
-      max-width: 1100px
-    >#cont--title
-      >h2
-        font-size: 20px
-        max-width: 1100px
-    >#cont--title
-      width: 100%
-      position: relative
-      text-align: end
-      >h2
-        text-align: center
-    > #menu--hamburguer
-      width: 50%
-      top: 0
-      display: absolute
-      text-align: end
-      margin-right: 35px
-      >.imgHam
-        text-decoration: none
-        width: 100%
-      >a:link
-        color: $text-color
-      >a:visited
-        color: $text-color
-      >i
-        width: 100%  
-      >div
+    padding: 30px
+    >.menu--hamburguer
+      >.toggle
         display: none
-      >.active
-        width: 100%
-        position: fixed
+  >.headerHamb
+    display: flex
+    justify-content: flex-start
+    >.absoluteActive
+      position: absolute
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      right: 0
+      width: 75vw
+      height: 100vh
+      top: 0
+      background-color: $text-color
+      >.toggleActive
         display: block
-        float: right
-        height: 100vh
-        top: 0
-        background-color: $text-color
-        float: right
+        width: 100%
+        height: 100%
         >nav
+          margin-top: 5px
           width: 100%
-          display: flex
-          flex-direction: column
-          >a
-            margin-top: 25px
-            width: 10%
-            height: 30px
-            margin-left: 25px
+          height: 100%
           >ul
-            line-height: 30px
-            margin-top: 20px
+            margin-top: 15px
+            width: 100%
             display: flex
             flex-direction: column
             >a
-              background-color: white
-              >li                
+              text-decoration: none
+              background: $back-cont-color
+              padding: 15px
+              display: flex
+              justify-content: flex-end
+              >a:link
+              color: $text-color
+            >a:visited
+              color: $text-color
+
+      
 .main
   >div
     display: flex
@@ -239,34 +225,27 @@ hr
             margin: 5px 10px 0 auto
             padding: 10px 0        
   #header
-    width: 90%
-    >div:last-child
-      display: block
-      >#box-1
-        >nav
-          width: 40vw
+    width: 100%            
 @media (min-width: 1112px)
   .container__header
     >#header
-      width: 80%
+      width: 70%
       display: flex
-      justify-content: flex-start
-      align-items: center
+      justify-content: space-between
+      align-items:  center
       max-width: 1100px
       margin: 0 auto
-      >#cont__img
-        margin-right: 20px
-      >#menu--hamburguer
-        width: 80%
-        max-width: 1100px
-        display: flex
-        justify-content: flex-end
-        align-content: center           
+      padding: 30px
+      >.menu--hamburguer
+        position: relative      
         >a
           display: none
-        >div
+        >.toggle
           display: block
           >nav
+            width: 350px
+            display: flex
+            justify-content: center
             background-color: $back-cont-color
             padding: 10px
             >a
@@ -282,10 +261,8 @@ hr
                 margin-right: 20px
                 border-right: solid 1px $input-border-color
                 padding-right: 15px      
-        >.active
-          display: none        
-
-            
+        
+          
   .main
     max-width: 1100px
     width: 90%

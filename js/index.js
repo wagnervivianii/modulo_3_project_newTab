@@ -246,13 +246,24 @@ function sum() {
   }
 }
 
-function menuHamburger(e) {
-  let tg = document.querySelector('.toggle')
-  let img = document.querySelector('.imgHam')
+function menuHamburger(campo,e) {
 
-  tg.classList.toggle('active') 
-  img.style.display = 'none'
-  
+  let hamburguer = document.querySelector('.menu--hamburguer')
+  let header = document.querySelector('#header');
+  let toggleActive = document.querySelector('.toggle');
+
+
+  header.classList.toggle('headerHamb')
+  hamburguer.classList.toggle('absoluteActive')
+  toggleActive.classList.toggle('toggleActive')
 }
 
-onload = loadPage()
+window.addEventListener('resize', function(){
+  let largura = window.innerWidth;
+
+  if(largura >= 1100){
+    let divHamb = document.querySelector("#hamb");
+    divHamb.classList.remove('absoluteActive');
+  }
+
+})

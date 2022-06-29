@@ -8,89 +8,66 @@
 }
 
 .container__header {
-  width: 100%;
   max-height: 100px;
   background-color: #E0E0E0;
 }
 .container__header > header {
-  width: 90%;
-  margin: 0 auto;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1100px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding: 20px 0;
-}
-.container__header > header > #cont__img {
-  max-width: 1100px;
-}
-.container__header > header > #cont--title > h2 {
-  font-size: 20px;
-  max-width: 1100px;
-}
-.container__header > header > #cont--title {
   width: 100%;
+  max-width: 1100px;
+  max-height: 70px;
   position: relative;
-  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding: 30px;
 }
-.container__header > header > #cont--title > h2 {
-  text-align: center;
-}
-.container__header > header > #menu--hamburguer {
-  width: 50%;
-  top: 0;
-  display: absolute;
-  text-align: end;
-  margin-right: 35px;
-}
-.container__header > header > #menu--hamburguer > .imgHam {
-  text-decoration: none;
-  width: 100%;
-}
-.container__header > header > #menu--hamburguer > a:link {
-  color: #333333;
-}
-.container__header > header > #menu--hamburguer > a:visited {
-  color: #333333;
-}
-.container__header > header > #menu--hamburguer > i {
-  width: 100%;
-}
-.container__header > header > #menu--hamburguer > div {
+.container__header > header > .menu--hamburguer > .toggle {
   display: none;
 }
-.container__header > header > #menu--hamburguer > .active {
-  width: 100%;
-  position: fixed;
-  display: block;
-  float: right;
+.container__header > .headerHamb {
+  display: flex;
+  justify-content: flex-start;
+}
+.container__header > .headerHamb > .absoluteActive {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  right: 0;
+  width: 75vw;
   height: 100vh;
   top: 0;
   background-color: #333333;
-  float: right;
 }
-.container__header > header > #menu--hamburguer > .active > nav {
+.container__header > .headerHamb > .absoluteActive > .toggleActive {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.container__header > .headerHamb > .absoluteActive > .toggleActive > nav {
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+}
+.container__header > .headerHamb > .absoluteActive > .toggleActive > nav > ul {
+  margin-top: 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.container__header > header > #menu--hamburguer > .active > nav > a {
-  margin-top: 25px;
-  width: 10%;
-  height: 30px;
-  margin-left: 25px;
-}
-.container__header > header > #menu--hamburguer > .active > nav > ul {
-  line-height: 30px;
-  margin-top: 20px;
+.container__header > .headerHamb > .absoluteActive > .toggleActive > nav > ul > a {
+  text-decoration: none;
+  background: #FFFFFF;
+  padding: 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+  color: #333333;
 }
-.container__header > header > #menu--hamburguer > .active > nav > ul > a {
-  background-color: white;
+.container__header > .headerHamb > .absoluteActive > .toggleActive > nav > ul > a:visited {
+  color: #333333;
 }
+
 .main > div {
   display: flex;
   justify-content: center;
@@ -300,64 +277,52 @@ hr {
   }
 
   #header {
-    width: 90%;
-  }
-  #header > div:last-child {
-    display: block;
-  }
-  #header > div:last-child > #box-1 > nav {
-    width: 40vw;
+    width: 100%;
   }
 }
 @media (min-width: 1112px) {
   .container__header > #header {
-    width: 80%;
+    width: 70%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 30px;
   }
-  .container__header > #header > #cont__img {
-    margin-right: 20px;
+  .container__header > #header > .menu--hamburguer {
+    position: relative;
   }
-  .container__header > #header > #menu--hamburguer {
-    width: 80%;
-    max-width: 1100px;
-    display: flex;
-    justify-content: flex-end;
-    align-content: center;
-  }
-  .container__header > #header > #menu--hamburguer > a {
+  .container__header > #header > .menu--hamburguer > a {
     display: none;
   }
-  .container__header > #header > #menu--hamburguer > div {
+  .container__header > #header > .menu--hamburguer > .toggle {
     display: block;
   }
-  .container__header > #header > #menu--hamburguer > div > nav {
+  .container__header > #header > .menu--hamburguer > .toggle > nav {
+    width: 350px;
+    display: flex;
+    justify-content: center;
     background-color: #FFFFFF;
     padding: 10px;
   }
-  .container__header > #header > #menu--hamburguer > div > nav > a {
+  .container__header > #header > .menu--hamburguer > .toggle > nav > a {
     display: none;
     text-decoration: none;
   }
-  .container__header > #header > #menu--hamburguer > div > nav a:link {
+  .container__header > #header > .menu--hamburguer > .toggle > nav a:link {
     color: #333333;
   }
-  .container__header > #header > #menu--hamburguer > div > nav a:visited {
+  .container__header > #header > .menu--hamburguer > .toggle > nav a:visited {
     color: #333333;
   }
-  .container__header > #header > #menu--hamburguer > div > nav > ul {
+  .container__header > #header > .menu--hamburguer > .toggle > nav > ul {
     display: flex;
   }
-  .container__header > #header > #menu--hamburguer > div > nav > ul > a:first-child {
+  .container__header > #header > .menu--hamburguer > .toggle > nav > ul > a:first-child {
     margin-right: 20px;
     border-right: solid 1px #979797;
     padding-right: 15px;
-  }
-  .container__header > #header > #menu--hamburguer > .active {
-    display: none;
   }
 
   .main {
