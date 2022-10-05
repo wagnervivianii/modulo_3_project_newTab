@@ -1,3 +1,19 @@
+@keyframes animation {
+  0% {
+    width: 1px;
+  }
+  100% {
+    width: 75vw;
+  }
+}
+@keyframes animation2 {
+  0% {
+    width: 1px;
+  }
+  100% {
+    width: 35vw;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +24,7 @@
 }
 
 .container__header {
+  width: 100%;
   max-height: 100px;
   background-color: #E0E0E0;
 }
@@ -39,6 +56,8 @@
   height: 100vh;
   top: 0;
   background-color: #333333;
+  animation-name: animation;
+  animation-duration: 1s;
 }
 .container__header > .headerHamb > .absoluteActive > .toggleActive {
   display: block;
@@ -49,6 +68,15 @@
   margin-top: 5px;
   width: 100%;
   height: 100%;
+}
+.container__header > .headerHamb > .absoluteActive > .toggleActive > nav > a {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+.container__header > .headerHamb > .absoluteActive > .toggleActive > nav > a > i {
+  scale: 110%;
+  color: white;
 }
 .container__header > .headerHamb > .absoluteActive > .toggleActive > nav > ul {
   margin-top: 15px;
@@ -62,10 +90,19 @@
   padding: 15px;
   display: flex;
   justify-content: flex-end;
-  color: #333333;
 }
 .container__header > .headerHamb > .absoluteActive > .toggleActive > nav > ul > a:visited {
   color: #333333;
+}
+.container__header > .headerHamb > .absoluteActive > .imgHam {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  opacity: 0%;
+  width: 50px;
+  height: 40px;
+  z-index: 1;
 }
 
 .main > div {
@@ -213,10 +250,16 @@ hr {
 }
 
 @media (min-width: 768px) {
+  .container_header {
+    width: 100%;
+    max-height: 100px;
+  }
+  .container_header > .header {
+    width: 100%;
+  }
   hr {
     display: none;
   }
-
   .container_form {
     border: solid 1px #979797;
     border-radius: 4px;
@@ -275,14 +318,39 @@ hr {
     margin: 5px 10px 0 auto;
     padding: 10px 0;
   }
-
   #header {
     width: 100%;
   }
 }
-@media (min-width: 1112px) {
+@media (min-width: 769px) {
+  .container__header {
+    width: 100%;
+    max-height: 100%;
+  }
   .container__header > #header {
-    width: 70%;
+    width: 100%;
+  }
+  .container__header > .headerHamb {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+  .container__header > .headerHamb > #cont--title > h2 {
+    margin-left: 100px;
+  }
+  .container__header > .headerHamb > .absoluteActive {
+    width: 35vw;
+    animation-name: animation2;
+    animation-duration: 1s;
+  }
+}
+@media (min-width: 1112px) {
+  .container__header {
+    width: 100%;
+    max-height: 100px;
+  }
+  .container__header > #header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -324,7 +392,6 @@ hr {
     border-right: solid 1px #979797;
     padding-right: 15px;
   }
-
   .main {
     max-width: 1100px;
     width: 90%;

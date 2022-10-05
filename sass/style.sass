@@ -1,5 +1,16 @@
 @import 'variables'
 @import 'mixins'
+@keyframes animation
+  0% 
+    width: 1px
+    
+  100% 
+    width: 75vw
+@keyframes animation2
+  0%
+    width: 1px
+  100%
+    width: 35vw    
 *
   margin: 0
   padding: 0
@@ -8,6 +19,7 @@
   text-decoration: none
   list-style: none
 .container__header
+  width: 100%
   max-height: 100px
   background-color: $top-color
   > header
@@ -36,6 +48,8 @@
       height: 100vh
       top: 0
       background-color: $text-color
+      animation-name: animation
+      animation-duration: 1s
       >.toggleActive
         display: block
         width: 100%
@@ -44,6 +58,13 @@
           margin-top: 5px
           width: 100%
           height: 100%
+          >a
+            width: 50px
+            display: flex
+            justify-content: center
+            >i
+              scale: 110%
+              color: white
           >ul
             margin-top: 15px
             width: 100%
@@ -55,12 +76,17 @@
               padding: 15px
               display: flex
               justify-content: flex-end
-              >a:link
-              color: $text-color
             >a:visited
-              color: $text-color
-
-      
+              color: $text-color     
+      >.imgHam
+        display: flex
+        align-items: flex-end
+        justify-content: center
+        position: absolute
+        opacity: 0%
+        width: 50px
+        height: 40px
+        z-index: 1
 .main
   >div
     display: flex
@@ -177,6 +203,11 @@ hr
   bottom: 0
   border: solid 5px $text-color
 @media (min-width: 768px)
+  .container_header
+    width: 100%
+    max-height: 100px
+    >.header
+      width: 100%
   hr
     display: none
   .container_form
@@ -225,11 +256,30 @@ hr
             margin: 5px 10px 0 auto
             padding: 10px 0        
   #header
-    width: 100%            
+    width: 100%   
+@media (min-width: 769px)
+  .container__header
+    width: 100%
+    max-height: 100%
+    >#header
+      width: 100%
+    >.headerHamb
+      width: 100%
+      display: flex
+      justify-content: start
+      >#cont--title
+        >h2
+          margin-left: 100px
+      >.absoluteActive
+        width: 35vw
+        animation-name: animation2
+        animation-duration: 1s      
 @media (min-width: 1112px)
   .container__header
+    width: 100%
+    max-height: 100px
     >#header
-      width: 70%
+      width: 100%
       display: flex
       justify-content: space-between
       align-items:  center

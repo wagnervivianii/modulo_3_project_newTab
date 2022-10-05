@@ -262,8 +262,12 @@ window.addEventListener('resize', function(){
   let largura = window.innerWidth;
 
   if(largura >= 1100){
-    let divHamb = document.querySelector("#hamb");
-    divHamb.classList.remove('absoluteActive');
-  }
+    let hamburguer = document.querySelector('.menu--hamburguer')
+  let header = document.querySelector('#header');
+  let toggleActive = document.querySelector('.toggle');
 
+  header.classList.remove('headerHamb')
+  hamburguer.classList.remove('absoluteActive')
+  toggleActive.classList.remove('toggleActive')
+  }
 })
