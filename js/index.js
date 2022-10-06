@@ -1,24 +1,8 @@
-// Validation and formatting of text fields
-// function field_validation_text(e){
-//   e.preventDefault();
-//   // regular expression to only allow lalphas and spaces
-//   const regText = /[a-zA-Z\s]/gi;
-//   // testing expression and limiting number of characters
-//   if(regText.test(e.key) && e.target.value.length < 40){
-//   //capital first letter
-//   e.target.value += (e.target.value.length == 0 ? e.key.toUpperCase() : e.key.toLowerCase());
-//   // removing unnecessary spacing between words
-//   text = e.target.value.replace(/\s{2,}/g, ' ');
-//   // returning treated value to input
-//   e.target.value = text
-//   }
-// }
-
 String.prototype.reverse = function () {
   return this.split('').reverse().join('');
 };
 
-// Validation and formatting of number fields
+
 function fieldsValidationNum(campo, e) {
 
   e.preventDefault();
@@ -176,7 +160,7 @@ function tagVerification() {
 function loadPage() {
   tagVerification()
   if (localStorage.getItem('list') != null) {
-    list = JSON.parse(localStorage.getItem('list'))
+   let list = JSON.parse(localStorage.getItem('list'))
     callInsert(list)
     sum()
   }

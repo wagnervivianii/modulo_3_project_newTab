@@ -12,7 +12,7 @@
   100%
     width: 35vw    
 *
-  margin: 0
+  margin: 0 
   padding: 0
   box-sizing: border-box
   font-family: 'Lato', sans-serif
@@ -24,7 +24,6 @@
   background-color: $top-color
   > header
     width: 100%
-    max-width: 1100px
     max-height: 70px
     position: relative
     display: flex
@@ -206,7 +205,7 @@ hr
   .container_header
     width: 100%
     max-height: 100px
-    >.header
+    >#header
       width: 100%
   hr
     display: none
@@ -259,10 +258,10 @@ hr
     width: 100%   
 @media (min-width: 769px)
   .container__header
-    width: 100%
-    max-height: 100%
+    width: 100vw
+    max-height: 100px
     >#header
-      width: 100%
+      width: 100vw
     >.headerHamb
       width: 100%
       display: flex
@@ -273,7 +272,17 @@ hr
       >.absoluteActive
         width: 35vw
         animation-name: animation2
-        animation-duration: 1s      
+        animation-duration: 1s
+        >.toggleActive
+          width: 100%
+          >nav
+            width: 100%
+            >ul
+              margin-top: 33px
+              >a:hover
+                background-color: $text-color
+                color: $back-cont-color
+            
 @media (min-width: 1112px)
   .container__header
     width: 100%
