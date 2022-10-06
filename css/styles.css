@@ -322,38 +322,10 @@ hr {
   }
 }
 @media (min-width: 769px) {
-  .container__header {
-    width: 100vw;
-    max-height: 100px;
-  }
-  .container__header > #header {
-    width: 100vw;
-  }
-  .container__header > .headerHamb {
-    width: 100%;
-    display: flex;
-    justify-content: start;
-  }
-  .container__header > .headerHamb > #cont--title > h2 {
-    margin-left: 100px;
-  }
-  .container__header > .headerHamb > .absoluteActive {
+  .container__header > #header > .absoluteActive {
     width: 35vw;
     animation-name: animation2;
     animation-duration: 1s;
-  }
-  .container__header > .headerHamb > .absoluteActive > .toggleActive {
-    width: 100%;
-  }
-  .container__header > .headerHamb > .absoluteActive > .toggleActive > nav {
-    width: 100%;
-  }
-  .container__header > .headerHamb > .absoluteActive > .toggleActive > nav > ul {
-    margin-top: 33px;
-  }
-  .container__header > .headerHamb > .absoluteActive > .toggleActive > nav > ul > a:hover {
-    background-color: #333333;
-    color: #FFFFFF;
   }
 }
 @media (min-width: 1112px) {
@@ -445,6 +417,24 @@ hr {
   }
   .main > .container_extract > .delDivNothing {
     width: 47%;
+  }
+  .container_header {
+    background-color: red;
+  }
+  .container_header > .headerHamb {
+    background-color: red;
+  }
+  .container_header > .headerHamb > .absoluteActive {
+    width: 35vw;
+    animation-name: animation2;
+    animation-duration: 1s;
+  }
+  .container_header > .headerHamb > .absoluteActive > .toggleActive > nav > ul {
+    margin-top: 33px;
+  }
+  .container_header > .headerHamb > .absoluteActive > .toggleActive > nav > ul > a:hover {
+    background-color: #333333;
+    color: #FFFFFF;
   }
 }
 

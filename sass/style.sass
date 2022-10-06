@@ -12,6 +12,7 @@
   100%
     width: 35vw    
 *
+  
   margin: 0 
   padding: 0
   box-sizing: border-box
@@ -255,34 +256,16 @@ hr
             margin: 5px 10px 0 auto
             padding: 10px 0        
   #header
-    width: 100%   
+    width: 100%  
 @media (min-width: 769px)
   .container__header
-    width: 100vw
-    max-height: 100px
     >#header
-      width: 100vw
-    >.headerHamb
-      width: 100%
-      display: flex
-      justify-content: start
-      >#cont--title
-        >h2
-          margin-left: 100px
       >.absoluteActive
         width: 35vw
         animation-name: animation2
         animation-duration: 1s
-        >.toggleActive
-          width: 100%
-          >nav
-            width: 100%
-            >ul
-              margin-top: 33px
-              >a:hover
-                background-color: $text-color
-                color: $back-cont-color
-            
+      
+    
 @media (min-width: 1112px)
   .container__header
     width: 100%
@@ -319,9 +302,7 @@ hr
               >a:first-child
                 margin-right: 20px
                 border-right: solid 1px $input-border-color
-                padding-right: 15px      
-        
-          
+                padding-right: 15px              
   .main
     max-width: 1100px
     width: 90%
@@ -370,4 +351,19 @@ hr
 
 
 
-  
+  @media (min-width: 769px)
+  .container_header
+    background-color: red
+    >.headerHamb
+      background-color: red
+      >.absoluteActive
+          width: 35vw
+          animation-name: animation2
+          animation-duration: 1s
+          >.toggleActive
+            >nav
+              >ul
+                margin-top: 33px
+                >a:hover
+                  background-color: $text-color
+                  color: $back-cont-color            
