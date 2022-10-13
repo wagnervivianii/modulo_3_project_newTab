@@ -255,3 +255,5 @@ window.addEventListener('resize', function(){
   toggleActive.classList.remove('toggleActive')
   }
 })
+
+onload(loadPage());
